@@ -1,9 +1,10 @@
 import { NavigationBar } from "../../components/navigation";
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
+import { Footer } from "@/components/footer";
 export function HomePage() {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <NavigationBar />
             <main className="h-screen w-screen flex items-center container pt-12 px-8 min-[320px]:pt-0">
                 <div className="-mt-12">
@@ -61,6 +62,7 @@ export function HomePage() {
                     <img className="z-10 hidden min-[320px]:block" src="/rocket.png" alt="rocket" />
                 </motion.div>
             </main>
+            <Footer />
         </div>
     )
 }

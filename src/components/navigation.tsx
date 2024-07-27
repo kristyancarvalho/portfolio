@@ -16,7 +16,6 @@ const navigationArray = [
   { title: '/sobre', link: '/about' },
   { title: '/projetos', link: '/projects' }
 ];
-
 export function NavigationBar() {
   const { pathname } = useLocation();
 
