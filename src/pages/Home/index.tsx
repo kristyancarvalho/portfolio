@@ -24,7 +24,7 @@ export function HomePage() {
                             transition={{ delay: 0.5, type: "just", duration: 0.8 }}
                             className="mt-8"
                         >
-                            <span className="text-7xl bg-gradient-to-r from-violet-800 to-violet-400 inline-block text-transparent bg-clip-text font-bold uppercase md:text-5xl  min-[320px]:text-4xl">desenvolvedor <br />full-stack.</span>
+                            <span className="text-7xl lg:text-8xl bg-gradient-to-r from-violet-800 to-violet-400 inline-block text-transparent bg-clip-text font-bold uppercase md:text-5xl  min-[320px]:text-4xl">desenvolvedor <br />full-stack.</span>
                         </motion.div>
                     </div>
                     <motion.p

@@ -13,7 +13,7 @@ export function AboutPage() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, y: -30 }}       
-                    transition={{ delay: 0.8, type: "spring", duration: 5 }}
+                    transition={{ type: "spring", duration: 5 }}
                     className="flex justify-center items-center"
                 >
                     <img src="/laptop.png" alt="laptop" className="max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"/>
@@ -30,7 +30,7 @@ export function AboutPage() {
                         <motion.span 
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ type: "just", duration: 0.5 }}
+                            transition={{ delay: 0.3, type: "just", duration: 0.5 }}
                             className="flex"
                         >
                             <code className="text-3xl px-2 py-1 mb-4 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
