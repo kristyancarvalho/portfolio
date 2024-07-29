@@ -31,9 +31,24 @@ export function HomePage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}       
                         transition={{ delay: 0.7 }}
-                        className="text-xl w-2/4 text-neutral-500 my-10 md:text-lg md:w-full min-[320px]:text-sm min-[320px]:w-full min-[320px]:-mt-8">
+                        className="text-xl w-2/4 text-neutral-400/80 my-10 md:text-lg md:w-full min-[320px]:text-lg min-[320px]:w-full min-[320px]:-mt-8">
                         Olá! Sou Kristyan Carvalho, um desenvolvedor fullstack apaixonado por criar soluções web inovadoras e eficientes. Com experiência em tecnologias de ponta como TypeScript, Prisma, Fastify, Express, Vite e Next.
                     </motion.p>
+                        <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}       
+                        transition={{ delay: 0.8 }}
+                    >    
+                        <motion.div
+                            initial={{ y: 0 }}
+                            animate={{ y: -25 }}       
+                            transition={{ delay: 0.8, type: "tween", duration: 1, repeat: Infinity, repeatType: "mirror" }}
+                            className="my-12"
+                            id="rocketImage"                
+                        >
+                            <img className="z-10 h-16 w-16 hidden min-[320px]:block lg:hidden" src="/rocket.png" alt="rocket" />
+                        </motion.div>
+                    </motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}       
@@ -54,12 +69,18 @@ export function HomePage() {
                 </div>
                 <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, y: -30 }}       
-                    transition={{ delay: 0.8, type: "spring", duration: 5 }}
-                    className="overflow-visibl mt-20"
-                    id="rocketImage"                
-                >
-                    <img className="z-10 hidden min-[320px]:block" src="/rocket.png" alt="rocket" />
+                    animate={{ opacity: 1 }}       
+                    transition={{ delay: 0.8 }}
+                >    
+                    <motion.div
+                        initial={{ y: 0 }}
+                        animate={{ y: -25 }}       
+                        transition={{ delay: 0.8, type: "tween", duration: 1, repeat: Infinity, repeatType: "mirror" }}
+                        className="mt-20"
+                        id="rocketImage"                
+                    >
+                        <img className="z-10 hidden lg:block" src="/rocket.png" alt="rocket" />
+                    </motion.div>
                 </motion.div>
             </main>
             <Footer />

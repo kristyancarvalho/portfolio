@@ -9,7 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Ellipsis } from 'lucide-react';
-import { Github, Instagram } from "lucide-react";
+import { SocialMedia } from './social';
 
 const navigationArray = [
   { title: '/inicio', link: '/' },
@@ -29,9 +29,9 @@ export function NavigationBar() {
               <code
                 className={`${
                   pathname === link
-                    ? 'text-violet-500 border-b-2 border-violet-500'
+                    ? 'text-violet-500 border-b-2 border-violet-500 font-bold'
                     : 'text-gray-200/80 hover:text-white'
-                } text-sm font-semibold py-4 px-3 hover: transition duration-300 ease-in-out`}
+                } text-sm py-4 px-3 hover: transition duration-300 ease-in-out`}
               >
                 {title}
               </code>
@@ -40,16 +40,7 @@ export function NavigationBar() {
         </div>
         <div className="hidden sm:block">
           <div className='flex gap-4 text-sm'>
-          <Link to="https://github.com/kristyancarvalho" target="_blank" className="text-white hover:underline">
-                <code className="flex items-center gap-1">
-                    <Github />
-                </code>
-            </Link>
-            <Link to="https://www.instagram.com/carvalho.kristyan/" target="_blank" className="text-pink-300 hover:underline">
-                <code className="flex items-center gap-1">
-                    <Instagram />
-                </code>
-            </Link>
+            <SocialMedia />
           </div>
         </div>
         <div className="sm:hidden">
@@ -75,16 +66,7 @@ export function NavigationBar() {
                       </Link>
                   ))}
                     <div className='flex gap-4 text-sm items-center justify-center mt-8'>
-                      <Link to="https://github.com/kristyancarvalho" target="_blank" className="text-white hover:underline">
-                          <code className="flex items-center gap-1">
-                              <Github />
-                          </code>
-                      </Link>
-                      <Link to="https://www.instagram.com/carvalho.kristyan/" target="_blank" className="text-pink-300 hover:underline">
-                          <code className="flex items-center gap-1">
-                              <Instagram />
-                          </code>
-                      </Link>
+                      <SocialMedia />
                     </div>
                   <div className='mt-8'>
                     <Logo/>
