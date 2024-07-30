@@ -2,11 +2,13 @@ import { NavigationBar } from "../../components/navigation";
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { Footer } from "@/components/footer";
+import { Download } from 'lucide-react';
+
 export function HomePage() {
     return (
         <div className="overflow-x-hidden">
             <NavigationBar />
-            <main className="h-screen w-screen flex lg:items-center container lg:mt-0 lg:pt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
+            <main className="h-screen w-screen flex lg:items-center container lg:mt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
                 <div className="-mt-12">
                     <div id="presentation" 
                         className="min-[320px]:mb-16"
@@ -38,12 +40,13 @@ export function HomePage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}       
                         transition={{ delay: 0.8 }}
+                        className="flex w-full min-[320px]:flex-col min-[320px]:items-center"
                     >    
                         <motion.div
                             initial={{ y: 0 }}
                             animate={{ y: -25 }}       
                             transition={{ delay: 0.8, type: "tween", duration: 1, repeat: Infinity, repeatType: "mirror" }}
-                            className="my-12"
+                            className="pb-12"
                             id="rocketImage"                
                         >
                             <img className="z-10 h-16 w-16 hidden min-[320px]:block lg:hidden" src="/rocket.png" alt="rocket" />
@@ -53,12 +56,13 @@ export function HomePage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}       
                         transition={{ delay: 0.8 }}
-                        className="flex gap-4"
                         id="actionButtons"
+                        className="flex lg:flex-row gap-4 min-[320px]:flex-col min-[320px]:items-center"
                     >
                         <a href="KristyanCarvalho.pdf" download="KristyanCarvalho-cv"
-                            className="font-semibold bg-violet-500 text-white px-6 py-2 rounded-md hover:bg-violet-600"
+                            className="font-semibold bg-violet-500 text-white px-6 flex items-center gap-2 py-2 rounded-md hover:bg-violet-600"
                         >
+                            <Download />
                             Baixar currículo
                         </a>
                         <Link to="/projects"
