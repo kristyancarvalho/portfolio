@@ -27,9 +27,9 @@ export function ProjectsPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3, type: "just", duration: 0.5 }}
-                            className="w-64 min-[320px]:w-full rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
+                            className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col"
                         >
-                            <img src="/Happy.png" alt="happy-cover" className="w-full height-40 rounded-sm"/>
+                            <img src="/Happy.png" alt="happy-cover" className="w-full lg:h-40 rounded-sm"/>
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Happy</strong></code>
@@ -55,9 +55,9 @@ export function ProjectsPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.6, type: "just", duration: 0.5 }}
-                            className="w-64 min-[320px]:w-full rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
+                            className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                         >
-                            <img src="/Paint.png" alt="paint-cover" className="w-full height-40 rounded-sm"/>
+                            <img src="/Paint.png" alt="paint-cover" className="w-full lg:h-40 rounded-sm"/>
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Paint</strong></code>
@@ -82,15 +82,15 @@ export function ProjectsPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.9, type: "just", duration: 0.5 }}
-                            className="w-64 min-[320px]:w-full rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
+                            className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                         >
-                            <img src="/SalottiRun.png" alt="salotti-run-cover" className="w-full height-40 rounded-sm"/>
+                            <img src="/SalottiRun.png" alt="salotti-run-cover" className="w-full lg:h-40 rounded-sm"/>
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Salotti Run</strong></code>
                                 </span>
                                 <span id="description" className="text-neutral-500/80 -mt-2">
-                                    Salotti Run é um jogo do gênero runner endless. Desenvolvido principalmente com JavaScript, HTML e CSS.
+                                    Salotti Run é um jogo do gênero runner endless para culminância de 2023.
                                 </span>
                                 <div id="platforms" className="flex items-center gap-2 text-neutral-400">
                                     <Chrome  />
@@ -109,15 +109,15 @@ export function ProjectsPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 1.2, type: "just", duration: 0.5 }}
-                            className="w-64 min-[320px]:w-full rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
+                            className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                         >
-                            <img src="/Letmeask.png" alt="let-me-ask-cover" className="w-full height-40 rounded-sm"/>
+                            <img src="/Letmeask.png" alt="let-me-ask-cover" className="w-full lg:h-40 rounded-sm"/>
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Let me Ask</strong></code>
                                 </span>
                                 <span id="description" className="text-neutral-500/80 -mt-2">
-                                    Crie salas para responder perguntas ao vivo ou para fazer perguntas ao seu streamer favorito.
+                                    Crie salas para responder ou para fazer perguntas ao vivo durante uma live.
                                 </span>
                                 <div id="platforms" className="flex items-center gap-2 text-neutral-400">
                                     <Chrome  />
@@ -137,15 +137,15 @@ export function ProjectsPage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.4, type: "just", duration: 0.5 }}
-                        className="lg:w-64 min-[320px]:w-full rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
+                        className="lg:w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                     >
-                        <img src="/Benchmark.png" alt="benchmark-cover" className="w-full height-40 rounded-sm"/>
+                        <img src="/Benchmark.png" alt="benchmark-cover" className="w-full lg:h-40 rounded-sm"/>
                         <div id="text" className="p-4 flex flex-col gap-4">
                             <span id="title">
                                 <code className="text-3xl text-neutral-500"><strong>Benchmark: paralelismo</strong></code>
                             </span>
                             <span id="description" className="text-neutral-500/80 -mt-2">
-                                Benchmark comparativo entre processamento de imagens em single thread e utilizando Worker Threads em Node.js.
+                                Benchmark comparativo entre processamento de imagens em single thread e Worker Threads.
                             </span>
                             <div id="platforms" className="flex items-center gap-2 text-neutral-400">
                                 <SquareTerminal  />
@@ -164,15 +164,15 @@ export function ProjectsPage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.7, type: "just", duration: 0.5 }}
-                        className="lg:w-64 min-[320px]:w-full rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
+                        className="lg:w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                     >
-                        <img src="/Planner.png" alt="planner-api-cover" className="w-full height-40 rounded-sm"/>
+                        <img src="/Planner.png" alt="planner-api-cover" className="w-full lg:h-40 rounded-sm"/>
                         <div id="text" className="p-4 flex flex-col gap-4">
                             <span id="title">
                                 <code className="text-3xl text-neutral-500"><strong>API Planner</strong></code>
                             </span>
                             <span id="description" className="text-neutral-500/80 -mt-2">
-                                API do Plann.er, aplicação desenvolvida durante o bootcamp "NLW Journey" da Rocketseat.
+                                API do Plann.er, aplicação de planejamento de viagem. NLW Journey 2024.
                             </span>
                             <div id="platforms" className="flex items-center gap-2 text-neutral-400">
                                 <Chrome  />

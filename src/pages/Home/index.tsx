@@ -6,7 +6,7 @@ export function HomePage() {
     return (
         <div className="overflow-x-hidden">
             <NavigationBar />
-            <main className="h-screen w-screen flex items-center container pt-12 px-8 min-[320px]:pt-0">
+            <main className="h-screen w-screen flex lg:items-center container lg:mt-0 pt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
                 <div className="-mt-12">
                     <div id="presentation" 
                         className="min-[320px]:mb-16"
@@ -16,7 +16,7 @@ export function HomePage() {
                             animate={{ opacity: 1 }}       
                             transition={{ delay: 0.2 }}
                         >
-                            <code className="text-3xl text-neutral-500 px-4 py-1 bg-neutral-800/50 rounded-sm md:text-2xl min-[320px]:text-xl">Prazer, sou Kristyan,</code>
+                            <code className="text-3xl uppercase text-neutral-500 px-4 py-1 bg-neutral-800/50 rounded-sm md:text-2xl min-[320px]:text-lg">Prazer, sou Kristyan!</code>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0}}
@@ -24,14 +24,14 @@ export function HomePage() {
                             transition={{ delay: 0.5, type: "just", duration: 0.8 }}
                             className="mt-8"
                         >
-                            <span className="text-7xl lg:text-8xl bg-gradient-to-r from-violet-800 to-violet-400 inline-block text-transparent bg-clip-text font-bold uppercase md:text-5xl  min-[320px]:text-4xl">desenvolvedor <br />full-stack.</span>
+                            <span className="text-7xl lg:text-8xl bg-gradient-to-r from-violet-800 to-violet-400 inline-block text-transparent bg-clip-text font-bold uppercase md:text-5xl  min-[320px]:text-5xl">desenvolvedor <br />full-stack.</span>
                         </motion.div>
                     </div>
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}       
                         transition={{ delay: 0.7 }}
-                        className="text-xl w-2/4 text-neutral-400/80 my-10 md:text-lg md:w-full min-[320px]:text-lg min-[320px]:w-full min-[320px]:-mt-8">
+                        className="text-xl w-2/4 text-neutral-400/80 my-20 md:text-lg md:w-full min-[320px]:text-base min-[320px]:w-full min-[320px]:-mt-10">
                         Olá! Sou Kristyan Carvalho, um desenvolvedor fullstack apaixonado por criar soluções web inovadoras e eficientes. Com experiência em tecnologias de ponta como TypeScript, Prisma, Fastify, Express, Vite e Next.
                     </motion.p>
                         <motion.div
@@ -56,11 +56,11 @@ export function HomePage() {
                         className="flex gap-4"
                         id="actionButtons"
                     >
-                        <button
-                            className="bg-violet-500 text-white px-6 py-2 rounded-md hover:bg-violet-600"
+                        <a href="KristyanCarvalho.pdf" download="KristyanCarvalho-cv"
+                            className="font-semibold bg-violet-500 text-white px-6 py-2 rounded-md hover:bg-violet-600"
                         >
-                            Baixar CV
-                        </button>
+                            Baixar currículo
+                        </a>
                         <Link to="/projects"
                         className="text-white px-4 py-2 hover:underline">
                             Ver projetos
