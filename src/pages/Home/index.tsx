@@ -8,7 +8,7 @@ export function HomePage() {
     return (
         <div className="overflow-x-hidden">
             <NavigationBar />
-            <main className="h-screen w-screen flex lg:items-center container lg:mt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
+            <main className="lg:h-screen lg:pb-0 min-[320px]:pb-12 min-[320px]:h-auto w-screen flex lg:items-center container lg:mt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
                 <div className="-mt-12">
                     <div id="presentation" 
                         className="min-[320px]:mb-16"
