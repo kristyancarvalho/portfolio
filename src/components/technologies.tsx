@@ -20,7 +20,7 @@ export function Technologies() {
                         transition={{ delay: 1.8, type: "just", duration: 0.5 }}
                 >
                     <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
-                        Desenvolvimento Front-End
+                        Front-End
                     </code>
                     <motion.p
                         initial={{ opacity: 0, y: 0}}
@@ -54,7 +54,7 @@ export function Technologies() {
                         transition={{ delay: 2.6, type: "just", duration: 0.5 }}
                 >
                     <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
-                        Desenvolvimento Back-End
+                        Back-End
                     </code>
                     <motion.p
                         initial={{ opacity: 0, y: 0}}
@@ -87,7 +87,7 @@ export function Technologies() {
                         transition={{ delay: 3.4, type: "just", duration: 0.5 }}
                 >
                     <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
-                        Ferramentas e Tecnologias
+                        Ferramentas
                     </code>
                     <motion.p
                         initial={{ opacity: 0, y: 0}}

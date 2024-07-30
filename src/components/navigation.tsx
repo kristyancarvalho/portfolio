@@ -20,7 +20,7 @@ export function NavigationBar() {
   const { pathname } = useLocation();
 
   return (
-    <nav className="flex bg-black/50 backdrop-blur-lg px-4 py-4 z-10 fixed top-0 w-full">
+    <nav className="flex bg-black/50 backdrop-blur-lg lg:px-4 py-4 z-10 fixed top-0 w-full">
       <div className="container mx-auto flex justify-between items-center">
         <Logo />
         <div className="hidden sm:block">
