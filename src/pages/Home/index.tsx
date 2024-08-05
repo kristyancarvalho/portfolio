@@ -49,7 +49,7 @@ export function HomePage() {
                             className="pb-12"
                             id="rocketImage"                
                         >
-                            <img className="z-10 h-16 w-16 hidden min-[320px]:block lg:hidden" src="/rocket.png" alt="rocket" />
+                            <img  loading="lazy" className="z-10 h-16 w-16 hidden min-[320px]:block lg:hidden" src="/rocket.png" alt="rocket" />
                         </motion.div>
                     </motion.div>
                     <motion.div

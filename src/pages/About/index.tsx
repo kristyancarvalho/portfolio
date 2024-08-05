@@ -2,13 +2,12 @@ import { motion } from "framer-motion";
 
 import { NavigationBar } from "../../components/navigation";
 import { Footer } from "@/components/footer";
-import { Technologies } from "../../components/technologies";
 
 export function AboutPage() {
     return (
         <div>
             <NavigationBar />
-            <main className="container flex w-screen py-28 flex-col gap-8 lg:px-36">
+            <main className="container flex w-screen lg:py-28 min-[320px]:py-24 flex-col gap-8 lg:px-36">
                 <div className="flex flex-col">
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -16,7 +15,7 @@ export function AboutPage() {
                     transition={{ type: "spring", duration: 5 }}
                     className="flex justify-center items-center"
                 >
-                    <img src="/laptop.png" alt="laptop" className="max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"/>
+                    <img loading="lazy" src="/laptop.png" alt="laptop" className="max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"/>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 0}}
@@ -85,7 +84,138 @@ export function AboutPage() {
                     </div>
                 </motion.div>
                 </div>
-                <Technologies />
+                <div id="technologies" className="py-12 flex flex-col">
+            <div>
+                <motion.span 
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 1.6, type: "just", duration: 0.5 }}
+                    >
+                        <code className="text-3xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                            /tecnologias
+                        </code>
+                    </motion.span>
+                    <div className="flex lg:flex-row gap-8 mt-4 min-[320px]:flex-col">
+                    <motion.div
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 1.8, type: "just", duration: 0.5 }}
+                    >
+                        <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                            Front-End
+                        </code>
+                        <motion.p
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 2, type: "just", duration: 0.5 }}
+                            className="text-neutral-500/80"
+                        >
+                            <strong>Linguagens:</strong> HTML, CSS, JavaScript, TypeScript
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 2.2, type: "just", duration: 0.5 }}
+                            className="text-neutral-500/80"
+                        >
+                            <strong>Frameworks/Bibliotecas:</strong> ReactJS, NextJS, Vite
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 2.4, type: "just", duration: 0.5 }}
+                            className="text-neutral-500/80"
+                        >
+                            <strong>Estilização:</strong> Tailwind CSS, Styled-Components, Sass
+                        </motion.p>
+                    </motion.div>
+
+                    <motion.div
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 2.6, type: "just", duration: 0.5 }}
+                    >
+                        <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                            Back-End
+                        </code>
+                        <motion.p
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 2.8, type: "just", duration: 0.5 }}
+                            className="text-neutral-500/80"
+                        >
+                            <strong>Linguagens:</strong> Typescript, Javascript
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 3, type: "just", duration: 0.5 }}
+                            className="text-neutral-500/80"
+                        >
+                            <strong>Frameworks:</strong> Express, Fastify
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 0}}
+                            animate={{ opacity: 1, y: 15}}
+                            transition={{ delay: 3.2, type: "just", duration: 0.5 }}
+                            className="text-neutral-500/80"
+                        >
+                            <strong>Bancos de Dados:</strong> MongoDB, Firebase, SQlite
+                        </motion.p>
+                    </motion.div>
+                        <motion.div
+                                initial={{ opacity: 0, y: 0}}
+                                animate={{ opacity: 1, y: 15}}
+                                transition={{ delay: 3.4, type: "just", duration: 0.5 }}
+                        >
+                            <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                                Ferramentas
+                            </code>
+                            <motion.p
+                                initial={{ opacity: 0, y: 0}}
+                                animate={{ opacity: 1, y: 15}}
+                                transition={{ delay: 3.6, type: "just", duration: 0.5 }}
+                                className="text-neutral-500/80"
+                            >
+                                <strong>Controle de Versão:</strong> Git, GitHub
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 0}}
+                                animate={{ opacity: 1, y: 15}}
+                                transition={{ delay: 3.8, type: "just", duration: 0.5 }}
+                                className="text-neutral-500/80"
+                            >
+                                <strong>CI/CD:</strong> GitHub Actions
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 0}}
+                                animate={{ opacity: 1, y: 15}}
+                                transition={{ delay: 4.0, type: "just", duration: 0.5 }}
+                                className="text-neutral-500/80"
+                            >
+                                <strong>ORM:</strong> Prisma
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 0}}
+                                animate={{ opacity: 1, y: 15}}
+                                transition={{ delay: 4.2, type: "just", duration: 0.5 }}
+                                className="text-neutral-500/80"
+                            >
+                                <strong>Testes:</strong> Jest
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 0}}
+                                animate={{ opacity: 1, y: 15}}
+                                transition={{ delay: 4.4, type: "just", duration: 0.5 }}
+                                className="text-neutral-500/80"
+                            >
+                                <strong>Containerização:</strong> Docker, Kubernetes
+                            </motion.p>
+                        </motion.div>
+                    </div>        
+                </div>
+            </div>
+ 
            </main>
             <Footer />
         </div>

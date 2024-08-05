@@ -9,7 +9,7 @@ export function ProjectsPage() {
     return (
         <>
             <NavigationBar />
-            <main className="container w-screen py-32 lg:px-36">
+            <main className="container w-screen lg:py-32 min-[320px]:py-24 lg:px-36">
             <motion.span 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -29,7 +29,7 @@ export function ProjectsPage() {
                             transition={{ delay: 0.3, type: "just", duration: 0.5 }}
                             className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col"
                         >
-                            <img src="/Happy.png" alt="happy-cover" className="w-full lg:h-40 rounded-sm"/>
+                            <img  loading="lazy" src="/Happy.png" alt="happy-cover" className="w-full lg:h-40 rounded-sm" />
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Happy</strong></code>
@@ -57,7 +57,7 @@ export function ProjectsPage() {
                             transition={{ delay: 0.6, type: "just", duration: 0.5 }}
                             className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                         >
-                            <img src="/Paint.png" alt="paint-cover" className="w-full lg:h-40 rounded-sm"/>
+                            <img  loading="lazy" src="/Paint.png" alt="paint-cover" className="w-full lg:h-40 rounded-sm"  />
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Paint</strong></code>
@@ -84,7 +84,7 @@ export function ProjectsPage() {
                             transition={{ delay: 0.9, type: "just", duration: 0.5 }}
                             className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                         >
-                            <img src="/SalottiRun.png" alt="salotti-run-cover" className="w-full lg:h-40 rounded-sm"/>
+                            <img  loading="lazy" src="/SalottiRun.png" alt="salotti-run-cover" className="w-full lg:h-40   rounded-sm"/>
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Salotti Run</strong></code>
@@ -111,7 +111,7 @@ export function ProjectsPage() {
                             transition={{ delay: 1.2, type: "just", duration: 0.5 }}
                             className="w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                         >
-                            <img src="/Letmeask.png" alt="let-me-ask-cover" className="w-full lg:h-40 rounded-sm"/>
+                            <img  loading="lazy" src="/Letmeask.png" alt="let-me-ask-cover" className="w-full lg:h-40 rou  nded-sm"/>
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className="text-3xl text-neutral-500"><strong>Let me Ask</strong></code>
@@ -139,7 +139,7 @@ export function ProjectsPage() {
                         transition={{ delay: 1.4, type: "just", duration: 0.5 }}
                         className="lg:w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                     >
-                        <img src="/Benchmark.png" alt="benchmark-cover" className="w-full lg:h-40 rounded-sm"/>
+                        <img  loading="lazy" src="/Benchmark.png" alt="benchmark-cover" className="w-full lg:h-40 rou  nded-sm"/>
                         <div id="text" className="p-4 flex flex-col gap-4">
                             <span id="title">
                                 <code className="text-3xl text-neutral-500"><strong>Benchmark: paralelismo</strong></code>
@@ -166,7 +166,7 @@ export function ProjectsPage() {
                         transition={{ delay: 1.7, type: "just", duration: 0.5 }}
                         className="lg:w-64 min-[320px]:w-full h-1/3 rounded-md bg-neutral-800/50 pb-2 flex flex-col justify-between"
                     >
-                        <img src="/Planner.png" alt="planner-api-cover" className="w-full lg:h-40 rounded-sm"/>
+                        <img  loading="lazy" src="/Planner.png" alt="planner-api-cover" className="w-full lg:h-40 rou  nded-sm"/>
                         <div id="text" className="p-4 flex flex-col gap-4">
                             <span id="title">
                                 <code className="text-3xl text-neutral-500"><strong>API Planner</strong></code>
