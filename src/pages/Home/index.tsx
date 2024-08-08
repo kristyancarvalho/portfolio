@@ -9,7 +9,7 @@ interface HomePageProps {
 
 export function HomePage({ theme }: HomePageProps) {
     return (
-        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-white'}`}>
+        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main className="lg:h-screen lg:pb-0 min-[320px]:pb-12 min-[320px]:h-auto w-screen flex lg:items-center container lg:mt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
                 <div className="-mt-12">
                     <div id="presentation" 

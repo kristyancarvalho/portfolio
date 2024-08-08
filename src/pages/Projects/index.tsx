@@ -10,7 +10,7 @@ interface ProjectsPageProps {
 
 export function ProjectsPage({ theme }: ProjectsPageProps) {
     return (
-        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-white'}`}>
+        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main className="container w-screen lg:py-32 min-[320px]:py-24 lg:px-36">
                 <motion.span 
                     initial={{ opacity: 0 }}

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logo } from './logo';
 import { Button } from "@/components/ui/button";
@@ -19,10 +20,15 @@ interface NavigationBarProps {
 
 export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
   const { pathname } = useLocation();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsSheetOpen(false);
+  };
 
   return (
     <nav className={`flex backdrop-blur-lg lg:px-4 py-4 z-10 fixed top-0 w-full transition-colors ${
-      theme === 'dark' ? 'bg-black/50' : 'bg-zinc-200/50'
+      theme === 'dark' ? 'bg-black/50' : 'bg-white/50'
     }`}>
       <div className="container mx-auto flex justify-between items-center">
         <Logo theme={theme} />
@@ -48,7 +54,7 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </div>
         <div className="sm:hidden">
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button 
                 className={`border-2 ${
@@ -69,7 +75,7 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
             >
               <div className='flex flex-col gap-8'>
                 {navigationArray.map(({ title, link }) => (
-                  <Link key={link} to={link}>
+                  <Link key={link} to={link} onClick={handleLinkClick}>
                     <code
                       className={`${
                         pathname === link
@@ -83,6 +89,7 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
                     </code>
                   </Link>
                 ))}
+                
                 <div className='flex gap-4 text-sm items-center justify-center mt-8'>
                   <SocialMedia theme={theme} />
                 </div>

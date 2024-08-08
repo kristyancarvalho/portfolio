@@ -7,7 +7,7 @@ interface NotFoundProps {
 
 export function NotFound({ theme }: NotFoundProps) {
     return (
-        <div className={`transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-white'}`}>
+        <div className={`transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main>
                 <div className="container h-screen w-screen flex flex-col items-center justify-center gap-4">
                     <img src="/rocket.png" alt="rocket" className="h-16 w-16 -mr-2"/> 

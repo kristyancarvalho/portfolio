@@ -8,7 +8,7 @@ interface AboutPageProps {
 
 export function AboutPage({ theme }: AboutPageProps) {
     return (
-        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-white'}`}>
+        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main className="container flex w-screen lg:py-28 min-[320px]:py-24 flex-col gap-8 lg:px-36">
                 <div className="flex flex-col">
                 <motion.div
