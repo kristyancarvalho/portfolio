@@ -1,13 +1,15 @@
-import { NavigationBar } from "../../components/navigation";
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { Footer } from "@/components/footer";
 import { Download } from 'lucide-react';
 
-export function HomePage() {
+interface HomePageProps {
+    theme: 'light' | 'dark';
+}
+
+export function HomePage({ theme }: HomePageProps) {
     return (
-        <div className="overflow-x-hidden">
-            <NavigationBar />
+        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-white'}`}>
             <main className="lg:h-screen lg:pb-0 min-[320px]:pb-12 min-[320px]:h-auto w-screen flex lg:items-center container lg:mt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
                 <div className="-mt-12">
                     <div id="presentation" 
@@ -18,7 +20,7 @@ export function HomePage() {
                             animate={{ opacity: 1 }}       
                             transition={{ delay: 0.2 }}
                         >
-                            <code className="text-3xl uppercase text-neutral-500 px-4 py-1 bg-neutral-800/50 rounded-sm md:text-2xl min-[320px]:text-lg">Prazer, sou Kristyan!</code>
+                            <code className={`text-3xl uppercase ${theme === 'dark' ? 'text-neutral-500 bg-neutral-800/50' : 'text-neutral-600 bg-neutral-500/50'} px-4 py-1 rounded-sm md:text-2xl min-[320px]:text-lg`}>Prazer, sou Kristyan!</code>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0}}
@@ -33,7 +35,7 @@ export function HomePage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}       
                         transition={{ delay: 0.7 }}
-                        className="text-xl w-2/4 min-[320px]:text-neutral-500 lg:text-neutral-400/80 my-20 md:text-lg md:w-full min-[320px]:text-sm min-[320px]:w-full min-[320px]:-mt-10">
+                        className={`text-xl w-2/4 ${theme === 'dark' ? 'min-[320px]:text-neutral-500 lg:text-neutral-400/80' : 'min-[320px]:text-neutral-500 lg:text-neutral-600'} my-20 md:text-lg md:w-full min-[320px]:text-sm min-[320px]:w-full min-[320px]:-mt-10`}>
                         Olá! Sou Kristyan Carvalho, um desenvolvedor fullstack apaixonado por criar soluções web inovadoras e eficientes. Com experiência em tecnologias de ponta como TypeScript, Prisma, Fastify, Express, Vite e Next.
                     </motion.p>
                         <motion.div
@@ -66,7 +68,7 @@ export function HomePage() {
                             Baixar currículo
                         </a>
                         <Link to="/projects"
-                        className="text-white px-4 py-2 hover:underline">
+                        className={`${theme === 'dark' ? 'text-white' : 'text-neutral-600'} px-4 py-2 underline`}>
                             Ver projetos
                         </Link>
                     </motion.div>
@@ -87,7 +89,7 @@ export function HomePage() {
                     </motion.div>
                 </motion.div>
             </main>
-            <Footer />
+            <Footer theme={theme} />
         </div>
     )
 }

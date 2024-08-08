@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 
-import { NavigationBar } from "../../components/navigation";
 import { Footer } from "@/components/footer";
 
-export function AboutPage() {
+interface AboutPageProps {
+    theme: 'light' | 'dark';
+}
+
+export function AboutPage({ theme }: AboutPageProps) {
     return (
-        <div>
-            <NavigationBar />
+        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-white'}`}>
             <main className="container flex w-screen lg:py-28 min-[320px]:py-24 flex-col gap-8 lg:px-36">
                 <div className="flex flex-col">
                 <motion.div
@@ -32,7 +34,7 @@ export function AboutPage() {
                             transition={{ delay: 0.3, type: "just", duration: 0.5 }}
                             className="flex"
                         >
-                            <code className="text-3xl px-2 py-1 mb-4 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                            <code className={`text-3xl px-2 py-1 mb-4 ${theme === 'dark' ? 'text-neutral-500/80 bg-neutral-800/50' : 'text-neutral-500 bg-neutral-800/20'} rounded-sm`}>
                                 /sobre mim
                             </code>
                         </motion.span>
@@ -51,7 +53,7 @@ export function AboutPage() {
                                 animate={{ opacity: 1, y: 15}}
                                 transition={{ delay: 0.8, type: "just", duration: 0.5 }}
                             >
-                                <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                                <code className={`text-2xl px-2 py-1 ${theme === 'dark' ? 'text-neutral-500/80 bg-neutral-800/50' : 'text-neutral-500 bg-neutral-800/20'} rounded-sm`}>
                                     Minha jornada
                                 </code>
                             </motion.code>
@@ -68,7 +70,7 @@ export function AboutPage() {
                                 animate={{ opacity: 1, y: 15}}
                                 transition={{ delay: 1.2, type: "just", duration: 0.5 }}
                             >
-                                <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                                <code className={`text-2xl px-2 py-1 ${theme === 'dark' ? 'text-neutral-500/80 bg-neutral-800/50' : 'text-neutral-500 bg-neutral-800/20'} rounded-sm`}>
                                     Interesses Pessoais
                                 </code>
                             </motion.span>
@@ -91,7 +93,7 @@ export function AboutPage() {
                             animate={{ opacity: 1, y: 15}}
                             transition={{ delay: 1.6, type: "just", duration: 0.5 }}
                     >
-                        <code className="text-3xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                        <code className={`text-3xl px-2 py-1 ${theme === 'dark' ? 'text-neutral-500/80 bg-neutral-800/50' : 'text-neutral-500 bg-neutral-800/20'} rounded-sm`}>
                             /tecnologias
                         </code>
                     </motion.span>
@@ -101,7 +103,7 @@ export function AboutPage() {
                             animate={{ opacity: 1, y: 15}}
                             transition={{ delay: 1.8, type: "just", duration: 0.5 }}
                     >
-                        <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                        <code className={`text-2xl px-2 py-1 ${theme === 'dark' ? 'text-neutral-500/80 bg-neutral-800/50' : 'text-neutral-500 bg-neutral-800/20'} rounded-sm`}>
                             Front-End
                         </code>
                         <motion.p
@@ -135,7 +137,7 @@ export function AboutPage() {
                             animate={{ opacity: 1, y: 15}}
                             transition={{ delay: 2.6, type: "just", duration: 0.5 }}
                     >
-                        <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                        <code className={`text-2xl px-2 py-1 ${theme === 'dark' ? 'text-neutral-500/80 bg-neutral-800/50' : 'text-neutral-500 bg-neutral-800/20'} rounded-sm`}>
                             Back-End
                         </code>
                         <motion.p
@@ -168,7 +170,7 @@ export function AboutPage() {
                                 animate={{ opacity: 1, y: 15}}
                                 transition={{ delay: 3.4, type: "just", duration: 0.5 }}
                         >
-                            <code className="text-2xl px-2 py-1 text-neutral-500/80 bg-neutral-800/50 rounded-sm">
+                            <code className={`text-2xl px-2 py-1 ${theme === 'dark' ? 'text-neutral-500/80 bg-neutral-800/50' : 'text-neutral-500 bg-neutral-800/20'} rounded-sm`}>
                                 Ferramentas
                             </code>
                             <motion.p
@@ -217,7 +219,7 @@ export function AboutPage() {
             </div>
  
            </main>
-            <Footer />
+            <Footer theme={theme} />
         </div>
     )
 }
