@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { Footer } from "@/components/footer";
 import { Download } from 'lucide-react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface HomePageProps {
     theme: 'light' | 'dark';
@@ -51,7 +53,12 @@ export function HomePage({ theme }: HomePageProps) {
                             className="pb-12"
                             id="rocketImage"                
                         >
-                            <img  loading="lazy" className="z-10 h-16 w-16 hidden min-[320px]:block lg:hidden" src="/rocket.png" alt="rocket" />
+                            <LazyLoadImage
+                                src="/rocket.png"
+                                effect="blur"
+                                alt="rocket"
+                                className="z-10 h-16 w-16 hidden min-[320px]:block lg:hidden"
+                            />
                         </motion.div>
                     </motion.div>
                     <motion.div
@@ -85,7 +92,12 @@ export function HomePage({ theme }: HomePageProps) {
                         className="mt-20"
                         id="rocketImage"                
                     >
-                        <img className="z-10 hidden lg:block" src="/rocket.png" alt="rocket" />
+                        <LazyLoadImage
+                            src="/rocket.png"
+                            effect="blur"
+                            alt="rocket"
+                            className="z-10 hidden lg:block"
+                        />
                     </motion.div>
                 </motion.div>
             </main>

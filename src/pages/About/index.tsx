@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 import { Footer } from "@/components/footer";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface AboutPageProps {
     theme: 'light' | 'dark';
@@ -17,7 +19,12 @@ export function AboutPage({ theme }: AboutPageProps) {
                     transition={{ type: "spring", duration: 5 }}
                     className="flex justify-center items-center"
                 >
-                    <img loading="lazy" src="/laptop.png" alt="laptop" className="max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"/>
+                    <LazyLoadImage
+                            src="/laptop.png"
+                            effect="blur"
+                            alt="laptop"
+                            className="max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"
+                        />
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 0}}

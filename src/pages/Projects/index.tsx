@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-
 import { Footer } from "@/components/footer";
-import { Chrome, Github, Monitor, Smartphone, SquareTerminal   } from "lucide-react";
+import { Chrome, Github, Monitor, Smartphone, SquareTerminal } from "lucide-react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface ProjectsPageProps {
     theme: 'light' | 'dark';
@@ -31,7 +32,12 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                             transition={{ delay: 0.3, type: "just", duration: 0.5 }}
                             className={`w-64 min-[320px]:w-full h-1/3 rounded-md ${theme === 'dark' ? 'bg-neutral-800/50' : 'bg-black/5'} flex flex-col`}
                         >
-                            <img loading="lazy" src="/Happy.png" alt="happy-cover" className="w-full lg:h-40 rounded-sm" />
+                            <LazyLoadImage
+                                src="/Happy.png"
+                                effect="blur"
+                                alt="happy-cover"
+                                className="w-full lg:h-40 rounded-sm"
+                            />
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className={`text-3xl ${theme === 'dark' ? 'text-neutral-500' : 'text-neutral-600'}`}><strong>Happy</strong></code>
@@ -59,7 +65,12 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                             transition={{ delay: 0.6, type: "just", duration: 0.5 }}
                             className={`w-64 min-[320px]:w-full h-1/3 rounded-md ${theme === 'dark' ? 'bg-neutral-800/50' : 'bg-black/5'} flex flex-col`}
                         >
-                            <img loading="lazy" src="/Paint.png" alt="paint-cover" className="w-full lg:h-40 rounded-sm"  />
+                            <LazyLoadImage
+                                src="/Paint.png"
+                                effect="blur"
+                                alt="paint-cover"
+                                className="w-full lg:h-40 rounded-sm"
+                            />
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className={`text-3xl ${theme === 'dark' ? 'text-neutral-500' : 'text-neutral-600'}`}><strong>Paint</strong></code>
@@ -86,7 +97,12 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                             transition={{ delay: 0.9, type: "just", duration: 0.5 }}
                             className={`w-64 min-[320px]:w-full h-1/3 rounded-md ${theme === 'dark' ? 'bg-neutral-800/50' : 'bg-black/5'} flex flex-col`}
                         >
-                            <img loading="lazy" src="/SalottiRun.png" alt="salotti-run-cover" className="w-full lg:h-40 rounded-sm"/>
+                            <LazyLoadImage
+                                src="/SalottiRun.png"
+                                effect="blur"
+                                alt="salotti-run-cover"
+                                className="w-full lg:h-40 rounded-sm"
+                            />
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className={`text-3xl ${theme === 'dark' ? 'text-neutral-500' : 'text-neutral-600'}`}><strong>Salotti Run</strong></code>
@@ -113,7 +129,12 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                             transition={{ delay: 1.2, type: "just", duration: 0.5 }}
                             className={`w-64 min-[320px]:w-full h-1/3 rounded-md ${theme === 'dark' ? 'bg-neutral-800/50' : 'bg-black/5'} flex flex-col`}
                         >
-                            <img loading="lazy" src="/Letmeask.png" alt="let-me-ask-cover" className="w-full lg:h-40 rounded-sm"/>
+                            <LazyLoadImage
+                                src="/Letmeask.png"
+                                effect="blur"
+                                alt="let-me-ask-cover"
+                                className="w-full lg:h-40 rounded-sm"
+                            />
                             <div id="text" className="p-4 flex flex-col gap-4">
                                 <span id="title">
                                     <code className={`text-3xl ${theme === 'dark' ? 'text-neutral-500' : 'text-neutral-600'}`}><strong>Let me Ask</strong></code>
@@ -141,7 +162,12 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                         transition={{ delay: 1.4, type: "just", duration: 0.5 }}
                         className={`lg:w-64 min-[320px]:w-full h-1/3 rounded-md ${theme === 'dark' ? 'bg-neutral-800/50' : 'bg-black/5'} flex flex-col`}
                     >
-                        <img loading="lazy" src="/Benchmark.png" alt="benchmark-cover" className="w-full lg:h-40 rounded-sm"/>
+                        <LazyLoadImage
+                            src="/Benchmark.png"
+                            effect="blur"
+                            alt="benchmark-cover"
+                            className="w-full lg:h-40 rounded-sm"
+                        />
                         <div id="text" className="p-4 flex flex-col gap-4">
                             <span id="title">
                                 <code className={`text-3xl ${theme === 'dark' ? 'text-neutral-500' : 'text-neutral-600'}`}><strong>Benchmark: paralelismo</strong></code>
@@ -168,7 +194,12 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                         transition={{ delay: 1.7, type: "just", duration: 0.5 }}
                         className={`lg:w-64 min-[320px]:w-full h-1/3 rounded-md ${theme === 'dark' ? 'bg-neutral-800/50' : 'bg-black/5'} flex flex-col`}
                     >
-                        <img loading="lazy" src="/Planner.png" alt="planner-api-cover" className="w-full lg:h-40 rounded-sm"/>
+                        <LazyLoadImage
+                            src="/Planner.png"
+                            effect="blur"
+                            alt="planner-api-cover"
+                            className="w-full lg:h-40 rounded-sm"
+                        />
                         <div id="text" className="p-4 flex flex-col gap-4">
                             <span id="title">
                                 <code className={`text-3xl ${theme === 'dark' ? 'text-neutral-500' : 'text-neutral-600'}`}><strong>API Planner</strong></code>
