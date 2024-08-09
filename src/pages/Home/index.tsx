@@ -10,7 +10,7 @@ interface HomePageProps {
 export function HomePage({ theme }: HomePageProps) {
     return (
         <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
-            <main className="lg:h-screen lg:pb-0 min-[320px]:pb-12 min-[320px]:h-auto w-screen flex lg:items-center container lg:mt-12 px-8 min-[320px]:mt-40 min-[320px]:items-start">
+            <main className="h-screen w-screen flex lg:items-center container lg:pt-12 px-8 min-[320px]:pt-40 min-[320px]:items-start">
                 <div className="-mt-12">
                     <div id="presentation" 
                         className="min-[320px]:mb-16"
@@ -20,7 +20,7 @@ export function HomePage({ theme }: HomePageProps) {
                             animate={{ opacity: 1 }}       
                             transition={{ delay: 0.2 }}
                         >
-                            <code className={`text-3xl uppercase ${theme === 'dark' ? 'text-neutral-500 bg-neutral-800/50' : 'text-neutral-600 bg-neutral-500/50'} px-4 py-1 rounded-sm md:text-2xl min-[320px]:text-lg`}>Prazer, sou Kristyan!</code>
+                            <code className={`text-3xl uppercase ${theme === 'dark' ? 'text-neutral-500 bg-neutral-800/50' : 'text-white bg-violet-500/50'} px-4 py-1 rounded-sm md:text-2xl min-[320px]:text-lg`}>Prazer, sou Kristyan!</code>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0}}
