@@ -6,9 +6,9 @@ interface LogoProps {
 export function Logo({ theme }: LogoProps) {
     return (
         <Link key="home" to="/">
-            <code className={`text-2xl
+            <code className={`lg:text-2xl min-[320px]:text-xl
                 ${
-                    theme === 'light' ? 'text-zinc-500' : 'dark:text-white'
+                    theme === 'light' ? 'text-zinc-600' : 'dark:text-white'
                  }`}>
                     [kristyan<strong className='text-bold text-violet-500'>.dev</strong>]
             </code>

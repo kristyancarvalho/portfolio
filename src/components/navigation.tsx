@@ -94,7 +94,7 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
                 <div className='flex gap-4 text-sm items-center justify-center mt-8'>
                   <SocialMedia theme={theme} />
                 </div>
-                <div className='mt-4'>
+                <div className='mt-4 w-full flex items-center justify-center'>
                   <Logo theme={theme}/>
                 </div>
               </div>
