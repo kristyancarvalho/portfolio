@@ -10,12 +10,11 @@ interface ThemeToggleProps {
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, toggleTheme }) => {
   return (
-    <div className="flex gap-2 items-center">
       <Button 
         variant="outline" 
         size="icon"
         onClick={toggleTheme}
-        className={`overflow-hiddenbg-transparent border-2 rounded-full p-2 transition-all ${
+        className={`overflow-hidden bg-transparent border-2 p-2 transition-all ${
           theme === 'dark' ? 'border-blue-700/30 bg-blue-800/40 hover:bg-blue-800/50' : 'border-yellow-400/30 bg-yellow-100/80 hover:bg-yellow-100/50'
         }`}
       >
@@ -29,7 +28,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, toggleTheme }) 
           </motion.div>
         ) : (
           <motion.div
-              initial={{ y: 20, rotate: 90, scale: 0 }}
+              initial={{ y: -20, rotate: 0, scale: 1 }}
               animate={{ y: 0, rotate: 0, scale: 1 }}
               transition={{ type: "spring", duration: 1 }}
           >
@@ -37,10 +36,5 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, toggleTheme }) 
           </motion.div>
         )}
       </Button>
-        <span className='lg:hidden min-[320px]:block'>
-          <strong>Tema:</strong>
-          {theme === 'light' ? ' Claro' : ' Escuro'}
-        </span>
-      </div>
   );
 };

@@ -53,7 +53,8 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
           <SocialMedia theme={theme} />
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </div>
-        <div className="sm:hidden">
+        <div className="flex items-center gap-2 sm:hidden">
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button 
@@ -92,9 +93,6 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
                 
                 <div className='flex gap-4 text-sm items-center justify-center mt-8'>
                   <SocialMedia theme={theme} />
-                </div>
-                <div className='flex items-center justify-center mt-8'>
-                  <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
                 </div>
                 <div className='mt-4'>
                   <Logo theme={theme}/>
