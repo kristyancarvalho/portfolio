@@ -1,17 +1,58 @@
 import { motion } from "framer-motion";
-
 import { Footer } from "@/components/footer";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 interface AboutPageProps {
     theme: 'light' | 'dark';
 }
-
 export function AboutPage({ theme }: AboutPageProps) {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === '#technologies') {
+            const element = document.getElementById('technologies');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
+    const scrollToTechnologies = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const element = document.getElementById('technologies');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main className="container flex w-screen lg:py-28 min-[320px]:py-24 flex-col gap-8 lg:px-36">
+                <Breadcrumb>
+                    <BreadcrumbList className="flex items-center">
+                        <BreadcrumbItem>
+                            <BreadcrumbLink>
+                                <Link to="/about" className="lg:text-lg text-violet-500">
+                                    Sobre mim
+                                </Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator>
+                            <span className="text-lg text-bold text-neutral-500/70" >/</span>
+                        </BreadcrumbSeparator>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink>
+                                <Link className="lg:text-lg text-violet-500" to="/about#technologies" onClick={scrollToTechnologies}>
+                                    Tecnologias
+                                </Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+                </Breadcrumb>
                 <div className="flex flex-col">
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -23,7 +64,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                             src="/laptop.png"
                             effect="blur"
                             alt="laptop"
-                            className="max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"
+                            className="mt-4 max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"
                         />
                 </motion.div>
                 <motion.div
