@@ -29,6 +29,23 @@ export function AboutPage({ theme }: AboutPageProps) {
         }
     };
 
+    useEffect(() => {
+        if (location.hash === '#about') {
+            const element = document.getElementById('about');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
+    const scrollToAbout = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const element = document.getElementById('about');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main className="container flex w-screen lg:py-28 min-[320px]:py-24 flex-col gap-8 lg:px-36">
@@ -36,7 +53,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                     <BreadcrumbList className="flex items-center">
                         <BreadcrumbItem>
                             <BreadcrumbLink>
-                                <Link to="/about" className="lg:text-lg text-violet-500">
+                                <Link to="/about" className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-500/80' : 'text-violet-500'}`} onClick={scrollToAbout}>
                                     Sobre mim
                                 </Link>
                             </BreadcrumbLink>
@@ -46,7 +63,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                         </BreadcrumbSeparator>
                         <BreadcrumbItem>
                             <BreadcrumbLink>
-                                <Link className="lg:text-lg text-violet-500" to="/about#technologies" onClick={scrollToTechnologies}>
+                                <Link className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-500/80' : 'text-violet-500'}`} to="/about#technologies" onClick={scrollToTechnologies}>
                                     Tecnologias
                                 </Link>
                             </BreadcrumbLink>
@@ -73,7 +90,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                     transition={{ type: "spring", duration: 2 }}
                     className="flex-col items-end"
                 >
-                    <div id="text"
+                    <div id="about"
                         className=""
                     >
                         <motion.span 
