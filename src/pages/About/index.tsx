@@ -53,9 +53,11 @@ export function AboutPage({ theme }: AboutPageProps) {
                     <BreadcrumbList className="flex items-center">
                         <BreadcrumbItem>
                             <BreadcrumbLink>
-                                <Link to="/about" className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-500/80' : 'text-violet-500'}`} onClick={scrollToAbout}>
-                                    Sobre mim
-                                </Link>
+                                <code>
+                                    <Link to="/about" className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-400' : 'text-violet-500'}`} onClick={scrollToAbout}>
+                                        Sobre mim
+                                    </Link>
+                                </code>
                             </BreadcrumbLink>
                         </BreadcrumbItem>
                         <BreadcrumbSeparator>
@@ -63,9 +65,11 @@ export function AboutPage({ theme }: AboutPageProps) {
                         </BreadcrumbSeparator>
                         <BreadcrumbItem>
                             <BreadcrumbLink>
-                                <Link className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-500/80' : 'text-violet-500'}`} to="/about#technologies" onClick={scrollToTechnologies}>
-                                    Tecnologias
-                                </Link>
+                                <code>
+                                    <Link className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-400' : 'text-violet-500'}`} to="/about#technologies" onClick={scrollToTechnologies}>
+                                        Tecnologias
+                                    </Link>
+                                </code>
                             </BreadcrumbLink>
                         </BreadcrumbItem>
                     </BreadcrumbList>
