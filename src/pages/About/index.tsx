@@ -29,7 +29,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                 <motion.div
                     initial={{ opacity: 0, y: 0}}
                     animate={{ opacity: 1, y: 15}}
-                    transition={{ type: "just", duration: 2 }}
+                    transition={{ type: "spring", duration: 2 }}
                     className="flex-col items-end"
                 >
                     <div id="text"

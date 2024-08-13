@@ -20,7 +20,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, toggleTheme }) 
       >
         {theme === 'light' ? (                  
           <motion.div
-              initial={{ y: -20, rotate: 0, scale: 1 }}
+              initial={{ y: -20, rotate: 20, scale: 0 }}
               animate={{ y: 0, rotate: 0, scale: 1 }}
               transition={{ type: "spring", duration: 1 }}
           >
@@ -28,7 +28,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, toggleTheme }) 
           </motion.div>
         ) : (
           <motion.div
-              initial={{ y: -20, rotate: 0, scale: 1 }}
+              initial={{ y: -20, rotate: 20, scale: 0 }}
               animate={{ y: 0, rotate: 0, scale: 1 }}
               transition={{ type: "spring", duration: 1 }}
           >
