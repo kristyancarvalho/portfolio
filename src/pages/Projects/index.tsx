@@ -84,7 +84,7 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                                 key={index}
                                 initial={{ opacity: 0,  y: -20, scale: 0 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                                transition={{ delay: 0.1 * (index + 2), type: "spring", duration: 2}}
+                                transition={{ delay: 0.15 * (index + 2), type: "spring", duration: 2}}
                             >
                                 <ProjectCard theme={theme} {...project} />
                             </motion.div>
