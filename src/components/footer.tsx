@@ -1,5 +1,5 @@
-import { Logo } from "./Logo";
-import { SocialMedia } from "./Social";
+import { Logo } from "./logo";
+import { SocialMedia } from "./social";
 
 interface FooterProps {
     theme: 'light' | 'dark'

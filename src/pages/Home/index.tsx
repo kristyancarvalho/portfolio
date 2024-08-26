@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/footer";
 import { Download } from 'lucide-react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';

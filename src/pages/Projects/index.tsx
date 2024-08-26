@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/footer";
 import { Chrome, Monitor, Smartphone, SquareTerminalIcon} from "lucide-react";
-import { ProjectCard } from "../../components/ProjectsCard";
+import { ProjectCard } from "../../components/projectsCard";
 
 interface ProjectsPageProps {
     theme: 'light' | 'dark';

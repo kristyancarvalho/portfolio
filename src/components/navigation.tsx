@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Logo } from './Logo';
+import { Logo } from './logo';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Ellipsis } from 'lucide-react';
-import { SocialMedia } from './Social';
+import { SocialMedia } from './social';
 import { ThemeToggle } from './ThemeToggle';
 
 const navigationArray = [
