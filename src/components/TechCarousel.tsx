@@ -58,7 +58,7 @@ export function TechCarousel({ theme }: TechCarouselProps) {
   };
 
   return (
-    <div className="w-full overflow-hidden lg:py-5 sm:py-0">
+    <div className="w-full overflow-hidden transtion-colors lg:py-5 sm:py-0">
       <Slider {...settings}>
         {technologies.map((tech, index) => (
           <div key={index} className="px-4">

@@ -51,23 +51,41 @@ export function AboutPage({ theme }: AboutPageProps) {
         <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main className="container flex w-screen lg:py-28 min-[320px]:py-24 flex-col gap-8 lg:px-36">
                 <Breadcrumb>
-                    <BreadcrumbList className="flex items-center">
+                    <BreadcrumbList className={`flex items-center p-2 border-b-2 ${theme === 'dark' ? 'border-neutral-800' : 'border-zinc-200/50'}`}>
                         <BreadcrumbItem>
                             <BreadcrumbLink>
                                 <code>
-                                    <Link to="/about" className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-400' : 'text-violet-500'}`} onClick={scrollToAbout}>
+                                    <Link 
+                                        to="/about" 
+                                        className={`font-semibold hover:underline lg:text-lg transition-colors duration-300 ${
+                                            theme === 'dark' 
+                                                ? 'text-violet-500 hover:text-violet-400' 
+                                                : 'text-violet-600 hover:text-violet-700'
+                                        }`} 
+                                        onClick={scrollToAbout}
+                                    >
                                         Sobre mim
                                     </Link>
                                 </code>
                             </BreadcrumbLink>
                         </BreadcrumbItem>
                         <BreadcrumbSeparator>
-                            <span className="text-lg text-bold text-neutral-500/70" >/</span>
+                            <span className={`mx-2 text-lg font-bold ${
+                                theme === 'dark' ? 'text-neutral-800' : 'text-zinc-200'
+                            }`}>|</span>
                         </BreadcrumbSeparator>
                         <BreadcrumbItem>
                             <BreadcrumbLink>
                                 <code>
-                                    <Link className={`font-semibold hover:underline lg:text-lg ${theme === 'dark' ? 'text-violet-400' : 'text-violet-500'}`} to="/about#technologies" onClick={scrollToTechnologies}>
+                                    <Link 
+                                        className={`font-semibold hover:underline lg:text-lg transition-colors duration-300 ${
+                                            theme === 'dark' 
+                                                ? 'text-violet-500 hover:text-violet-400' 
+                                                : 'text-violet-600 hover:text-violet-700'
+                                        }`} 
+                                        to="/about#technologies" 
+                                        onClick={scrollToTechnologies}
+                                    >
                                         Tecnologias
                                     </Link>
                                 </code>
@@ -75,6 +93,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                         </BreadcrumbItem>
                     </BreadcrumbList>
                 </Breadcrumb>
+
                 <div className="flex flex-col">
                 <motion.div
                     initial={{ opacity: 0 }}
