@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Footer } from "@/components/footer";
+import { TechCarousel } from "@/components/TechCarousel";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
@@ -82,11 +83,11 @@ export function AboutPage({ theme }: AboutPageProps) {
                     className="flex justify-center items-center"
                 >
                     <LazyLoadImage
-                            src="/laptop.png"
-                            effect="blur"
-                            alt="laptop"
-                            className="mt-4 max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"
-                        />
+                        src="/laptop.png"
+                        effect="blur"
+                        alt="laptop"
+                        className="mt-4 max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"
+                    />
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 0}}
@@ -286,7 +287,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                     </div>        
                 </div>
             </div>
- 
+            <TechCarousel theme={theme} />
            </main>
             <Footer theme={theme} />
         </div>
