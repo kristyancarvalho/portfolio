@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Ellipsis } from 'lucide-react';
 import { SocialMedia } from './social';
-import { ThemeToggle } from './ThemeToggle';
+import { ThemeToggle } from './themeToggle';
 
 const navigationArray = [
   { title: '/inicio', link: '/' },

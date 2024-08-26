@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Footer } from "@/components/footer";
-import { TechCarousel } from "@/components/TechCarousel";
+import { TechCarousel } from "@/components/techCarousel";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
