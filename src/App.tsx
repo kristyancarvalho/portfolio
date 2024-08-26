@@ -4,7 +4,7 @@ import { HomePage } from "./pages/Home";
 import { ProjectsPage } from "./pages/Projects";
 import { AboutPage } from "./pages/About";
 import { NotFound } from "./pages/404";
-import { NavigationBar } from "./components/navigation";
+import { NavigationBar } from "./components/Navigation";
 
 export function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
