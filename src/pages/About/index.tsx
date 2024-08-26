@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { TechCarousel } from "@/components/TechCarousel";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -53,21 +53,19 @@ export function AboutPage({ theme }: AboutPageProps) {
                 <Breadcrumb>
                     <BreadcrumbList className={`flex items-center p-2 border-b-2 ${theme === 'dark' ? 'border-neutral-800' : 'border-zinc-200/50'}`}>
                         <BreadcrumbItem>
-                            <BreadcrumbLink>
-                                <code>
-                                    <Link 
-                                        to="/about" 
-                                        className={`font-semibold hover:underline lg:text-lg transition-colors duration-300 ${
-                                            theme === 'dark' 
-                                                ? 'text-violet-500 hover:text-violet-400' 
-                                                : 'text-violet-600 hover:text-violet-700'
-                                        }`} 
-                                        onClick={scrollToAbout}
-                                    >
-                                        Sobre mim
-                                    </Link>
-                                </code>
-                            </BreadcrumbLink>
+                            <code>
+                                <Link 
+                                    to="/about" 
+                                    className={`font-semibold hover:underline lg:text-lg transition-colors duration-300 ${
+                                        theme === 'dark' 
+                                            ? 'text-violet-500 hover:text-violet-400' 
+                                            : 'text-violet-600 hover:text-violet-700'
+                                    }`} 
+                                    onClick={scrollToAbout}
+                                >
+                                    Sobre mim
+                                </Link>
+                            </code>
                         </BreadcrumbItem>
                         <BreadcrumbSeparator>
                             <span className={`mx-2 text-lg font-bold ${
@@ -75,21 +73,19 @@ export function AboutPage({ theme }: AboutPageProps) {
                             }`}>|</span>
                         </BreadcrumbSeparator>
                         <BreadcrumbItem>
-                            <BreadcrumbLink>
-                                <code>
-                                    <Link 
-                                        className={`font-semibold hover:underline lg:text-lg transition-colors duration-300 ${
-                                            theme === 'dark' 
-                                                ? 'text-violet-500 hover:text-violet-400' 
-                                                : 'text-violet-600 hover:text-violet-700'
-                                        }`} 
-                                        to="/about#technologies" 
-                                        onClick={scrollToTechnologies}
-                                    >
-                                        Tecnologias
-                                    </Link>
-                                </code>
-                            </BreadcrumbLink>
+                            <code>
+                                <Link 
+                                    className={`font-semibold hover:underline lg:text-lg transition-colors duration-300 ${
+                                        theme === 'dark' 
+                                            ? 'text-violet-500 hover:text-violet-400' 
+                                            : 'text-violet-600 hover:text-violet-700'
+                                    }`} 
+                                    to="/about#technologies" 
+                                    onClick={scrollToTechnologies}
+                                >
+                                    Tecnologias
+                                </Link>
+                            </code>
                         </BreadcrumbItem>
                     </BreadcrumbList>
                 </Breadcrumb>
