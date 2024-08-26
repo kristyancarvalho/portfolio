@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Ellipsis } from 'lucide-react';
 import { SocialMedia } from './social';
 import { ThemeToggle } from './ThemeToggle';
+import { motion, useScroll } from 'framer-motion';
 
 const navigationArray = [
   { title: '/inicio', link: '/' },
@@ -19,6 +20,7 @@ interface NavigationBarProps {
 }
 
 export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
+  const { scrollYProgress } = useScroll();
   const { pathname } = useLocation();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -102,6 +104,8 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
           </Sheet>
         </div>
       </div>
+      
+      <motion.div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-700 to-violet-500" style={{ scaleX: scrollYProgress }} />
     </nav>
   );
 }
