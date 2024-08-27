@@ -54,10 +54,10 @@ export function HomePage({ theme }: HomePageProps) {
                             id="rocketImage"                
                         >
                             <LazyLoadImage
-                                src="/rocket.png"
+                                src="/rocket_mobile.png"
                                 effect="blur"
-                                alt="rocket"
-                                className="z-10 h-16 w-16 hidden min-[320px]:block lg:hidden"
+                                alt="rocketMobile"
+                                className="z-10 h-24 w-24 hidden min-[320px]:block lg:hidden"
                             />
                         </motion.div>
                     </motion.div>
@@ -93,7 +93,7 @@ export function HomePage({ theme }: HomePageProps) {
                         id="rocketImage"                
                     >
                         <LazyLoadImage
-                            src="/rocket_mobile.png"
+                            src="/rocket.png"
                             effect="blur"
                             alt="rocket"
                             className="z-10 hidden lg:block"
