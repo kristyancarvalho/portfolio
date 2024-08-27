@@ -1,13 +1,39 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Footer } from "@/components/footer";
 import { Chrome, Monitor, Smartphone, SquareTerminalIcon} from "lucide-react";
 import { ProjectCard } from "../../components/projectsCard";
+import { useRef } from "react";
 
 interface ProjectsPageProps {
     theme: 'light' | 'dark';
 }
 
 export function ProjectsPage({ theme }: ProjectsPageProps) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                stiffness: 100
+            }
+        }
+    };
+
     const projects = [
         {
             title: "Happy",
@@ -63,6 +89,7 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
             platforms: [Chrome],
         },
     ];
+    
 
     return (
         <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
@@ -78,21 +105,25 @@ export function ProjectsPage({ theme }: ProjectsPageProps) {
                     </code>
                 </motion.span>
                 <div id="projects" className="py-6 w-full">
-                    <div className="grid grid-cols-1 min-[320px]:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <motion.div 
+                        ref={ref}
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        className="grid grid-cols-1 min-[320px]:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+                    >
                         {projects.map((project, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0,  y: -20, scale: 0 }}
-                                animate={{ opacity: 1, y: 0, scale: 1 }}
-                                transition={{ delay: 0.15 * (index + 2), type: "spring", duration: 2}}
+                                variants={itemVariants}
                             >
                                 <ProjectCard theme={theme} {...project} />
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </main>
-            <Footer theme={theme}/>
+            <Footer theme={theme} />
         </div>
     )
 }

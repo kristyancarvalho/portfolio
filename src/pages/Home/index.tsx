@@ -93,7 +93,7 @@ export function HomePage({ theme }: HomePageProps) {
                         id="rocketImage"                
                     >
                         <LazyLoadImage
-                            src="/rocket.png"
+                            src="/rocket_mobile.png"
                             effect="blur"
                             alt="rocket"
                             className="z-10 hidden lg:block"
