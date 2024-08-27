@@ -18,6 +18,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.18",
     "lucide-react": "^0.416.0",
+    "package": "^1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-lazy-load-image-component": "^1.6.2",
