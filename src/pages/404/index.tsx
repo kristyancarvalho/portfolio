@@ -1,4 +1,6 @@
 import { Footer } from "@/components/footer";
+import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 
 interface NotFoundProps {
@@ -10,7 +12,20 @@ export function NotFound({ theme }: NotFoundProps) {
         <div className={`transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main>
                 <div className="container h-screen w-screen flex flex-col items-center justify-center gap-4">
-                    <img src="/rocket.png" alt="rocket" className="h-16 w-16 -mr-2"/> 
+                <motion.div
+                        initial={{ y: 0 }}
+                        animate={{ y: -25 }}       
+                        transition={{ delay: 0.8, type: "tween", duration: 1, repeat: Infinity, repeatType: "mirror" }}
+                        className="mt-20"
+                        id="rocketImage"                
+                    >
+                        <LazyLoadImage
+                            src="/rocket.png"
+                            effect="blur"
+                            alt="rocket"
+                            className="z-10 h-24 w-24"
+                        />
+                    </motion.div>
                     <h1 className="text-3xl font-bold text-neutral-500">404</h1>
                     <span className="text-xl text-neutral-500">
                         Foguete fora de órbita...
