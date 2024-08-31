@@ -11,7 +11,7 @@ interface HomePageProps {
 
 export function HomePage({ theme }: HomePageProps) {
     return (
-        <div className={`overflow-x-hidden transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
+        <div className={`overflow-x-hidden transition-colors duration-300 ease-in-out ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main className="h-screen w-screen flex lg:items-center container lg:pt-12 px-8 min-[320px]:pt-40 min-[320px]:items-start">
                 <div className="-mt-12">
                     <div id="presentation" 

@@ -54,7 +54,7 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
   }, []);
 
   return (
-    <nav className={`flex backdrop-blur-lg lg:px-4 py-4 z-10 fixed top-0 w-full transition-colors ${
+    <nav className={`flex backdrop-blur-lg lg:px-4 py-4 z-10 fixed top-0 w-full transition-colors duration-300 ease-in-out ${
       theme === 'dark' ? 'bg-black/50' : 'bg-white/50'
     }`}>
       <div className="container mx-auto flex justify-between items-center">

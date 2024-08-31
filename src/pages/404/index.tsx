@@ -9,7 +9,7 @@ interface NotFoundProps {
 
 export function NotFound({ theme }: NotFoundProps) {
     return (
-        <div className={`transition-colors ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
+        <div className={`transition-colors duration-300 ease-in-out ${theme === 'dark' ? 'bg-zinc-950' : 'bg-zinc-200/50'}`}>
             <main>
                 <div className="container h-screen w-screen flex flex-col items-center justify-center gap-4">
                 <motion.div
