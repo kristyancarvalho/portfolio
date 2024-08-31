@@ -24,7 +24,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, toggleTheme }) 
           initial={{ y: -30, opacity: 0, rotate: -90 }}
           animate={{ y: 0, opacity: 1, rotate: 0 }}
           exit={{ y: 30, opacity: 0, rotate: 90 }}
-          transition={{ duration: 0.1, ease: "easeInOut" }}
+          transition={{ duration: 0.2, ease: "easeInOut", type: "spring" }}
         >
           {theme === 'light' ? (
             <Sun className="text-yellow-600 h-[1.2rem] w-[1.2rem] transition-all" />
