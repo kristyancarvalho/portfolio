@@ -25,6 +25,7 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [activeTabLeft, setActiveTabLeft] = useState(0);
   const [activeTabWidth, setActiveTabWidth] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const tabRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const handleLinkClick = () => {
@@ -38,10 +39,19 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
     if (activeTab) {
       setActiveTabLeft(activeTab.offsetLeft);
       setActiveTabWidth(activeTab.offsetWidth);
-    } else {
-      console.log('No active tab found');
     }
   }, [pathname]);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   return (
     <nav className={`flex backdrop-blur-lg lg:px-4 py-4 z-10 fixed top-0 w-full transition-colors ${
@@ -134,7 +144,12 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
         </div>
       </div>
       
-      <motion.div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-700 to-violet-500" style={{ scaleX: scrollYProgress }} />
+      {isMobile && (
+        <motion.div 
+          className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-700 to-violet-500" 
+          style={{ scaleX: scrollYProgress }} 
+        />
+      )}
     </nav>
   );
 }
