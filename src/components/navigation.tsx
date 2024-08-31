@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logo } from './logo';
 import { Button } from "@/components/ui/button";
@@ -23,10 +23,25 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
   const { scrollYProgress } = useScroll();
   const { pathname } = useLocation();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [activeTabLeft, setActiveTabLeft] = useState(0);
+  const [activeTabWidth, setActiveTabWidth] = useState(0);
+  const tabRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const handleLinkClick = () => {
     setIsSheetOpen(false);
   };
+
+  useEffect(() => {
+    const activeTab = tabRefs.current.find(
+      (tab) => tab?.getAttribute('href') === pathname
+    );
+    if (activeTab) {
+      setActiveTabLeft(activeTab.offsetLeft);
+      setActiveTabWidth(activeTab.offsetWidth);
+    } else {
+      console.log('No active tab found');
+    }
+  }, [pathname]);
 
   return (
     <nav className={`flex backdrop-blur-lg lg:px-4 py-4 z-10 fixed top-0 w-full transition-colors ${
@@ -34,29 +49,43 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
     }`}>
       <div className="container mx-auto flex justify-between items-center">
         <Logo theme={theme} />
-        <div className="hidden sm:block">
-          {navigationArray.map(({ title, link }) => (
-            <Link key={link} to={link}>
-              <code
-                className={`${
-                  pathname === link
-                    ? 'text-violet-500 border-b-4 border-violet-500 font-extrabold'
-                    : theme === 'dark' 
-                      ? 'text-gray-200/80 hover:text-white' 
-                      : 'text-zinc-900 hover:text-black'
-                } text-sm py-5 px-3 hover: transition duration-300 ease-in-out`}
-              >
-                {title}
-              </code>
+        <div className="hidden sm:block relative">
+          {navigationArray.map(({ title, link }, index) => (
+            <Link
+              key={link}
+              to={link}
+              ref={(el) => (tabRefs.current[index] = el)}
+              className={`relative inline-block ${
+                pathname === link
+                  ? 'text-violet-500 font-extrabold'
+                  : theme === 'dark' 
+                    ? 'text-gray-200/80 hover:text-white' 
+                    : 'text-zinc-900 hover:text-black'
+              } text-sm py-5 px-3 transition duration-300 ease-in-out`}
+            >
+              <code>{title}</code>
             </Link>
           ))}
+          <motion.div
+            className="absolute -bottom-4 h-1 rounded-full bg-violet-500"
+            initial={false}
+            animate={{
+              left: activeTabLeft,
+              width: activeTabWidth,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 500,
+              damping: 30
+            }}
+          />
         </div>
         <div className="hidden sm:flex items-center gap-4">
           <SocialMedia theme={theme} />
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </div>
         <div className="flex items-center gap-2 sm:hidden">
-        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button 
