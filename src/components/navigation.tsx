@@ -144,7 +144,7 @@ export function NavigationBar({ theme, toggleTheme }: NavigationBarProps) {
         </div>
       </div>
       
-      {isMobile && (
+      {isMobile && pathname !== '/' && (
         <motion.div 
           className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-700 to-violet-500" 
           style={{ scaleX: scrollYProgress }} 
