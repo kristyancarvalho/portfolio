@@ -36,9 +36,9 @@ export function TechCarousel({ theme }: TechCarouselProps) {
     dots: false,
     infinite: true,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 5,
     autoplay: true,
-    speed: 3000,
+    speed: 6000,
     autoplaySpeed: 0,
     cssEase: "linear",
     responsive: [
