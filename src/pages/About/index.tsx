@@ -120,7 +120,6 @@ export function AboutPage({ theme }: AboutPageProps) {
                                 alt="laptop"
                                 className="max-h-screen-sm max-w-screen-sm lg:max-h-64 min-[320px]:max-h-56"
                                 beforeLoad={() => {
-                                    // Use cached image if available
                                     if (imageCache.has(LAPTOP_IMAGE_URL)) {
                                         setImageLoaded(true);
                                     }
@@ -233,7 +232,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                                     transition={{ delay: 2, type: "just", duration: 0.5 }}
                                     className="text-neutral-500/80"
                                 >
-                                    <strong>Linguagens:</strong> HTML, CSS, JavaScript, TypeScript
+                                    <strong>Linguagens:</strong> HTML, CSS, JavaScript, TypeScript, Lua
                                 </motion.p>
                                 <motion.p
                                     initial={{ opacity: 0, y: 0}}
@@ -267,7 +266,7 @@ export function AboutPage({ theme }: AboutPageProps) {
                                     transition={{ delay: 2.8, type: "just", duration: 0.5 }}
                                     className="text-neutral-500/80"
                                 >
-                                    <strong>Linguagens:</strong> Typescript, Javascript
+                                    <strong>Linguagens:</strong> Typescript, Javascript, Golang
                                 </motion.p>
                                 <motion.p
                                     initial={{ opacity: 0, y: 0}}
