@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Header } from '@/widgets/header/Header'
 import { HeroSection } from '@/widgets/hero/HeroSection'
+import { AboutSection } from '@/widgets/about/AboutSection'
 import { BackgroundDecoration } from '@/widgets/decoration/BackgroundDecoration'
 import { Section } from '@/shared/ui/Section'
 
@@ -13,9 +14,7 @@ export function App() {
       <Header />
       <main>
         <HeroSection />
-        <Section id="about" className="bg-background-soft">
-          <h2 className="type-heading">{t('nav.about')}</h2>
-        </Section>
+        <AboutSection />
         <Section id="projects">
           <h2 className="type-heading">{t('nav.projects')}</h2>
         </Section>

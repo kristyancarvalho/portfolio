@@ -26,5 +26,21 @@
     "downloadResume": "Download resume",
     "viewProjects": "View projects",
     "availability": "Available for new projects"
+  },
+  "about": {
+    "eyebrow": "Profile",
+    "title": "About",
+    "bio": "I am a full-stack developer focused on modern, performant and well-structured applications. I build APIs, web interfaces, terminal tools, automations and open-source projects. I care about turning ideas into usable systems, with attention to architecture, user experience, documentation and long-term maintainability.",
+    "work": "I focus on clear, well-typed code, pragmatic decisions and attention to documentation, testing and long-term maintainability.",
+    "stackTitle": "Main stack",
+    "interestsTitle": "Technical interests",
+    "interests": [
+      "APIs and backend development",
+      "Terminal tools (CLI and TUI)",
+      "Automation and developer experience",
+      "Open source",
+      "Performance and clean architecture",
+      "Technical writing"
+    ]
   }
 }
