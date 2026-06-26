@@ -4,6 +4,7 @@ import { HeroSection } from '@/widgets/hero/HeroSection'
 import { AboutSection } from '@/widgets/about/AboutSection'
 import { ProjectsSection } from '@/widgets/projects/ProjectsSection'
 import { ContactSection } from '@/widgets/contact/ContactSection'
+import { Footer } from '@/widgets/footer/Footer'
 import { BackgroundDecoration } from '@/widgets/decoration/BackgroundDecoration'
 import { Section } from '@/shared/ui/Section'
 
@@ -23,6 +24,7 @@ export function App() {
         </Section>
         <ContactSection />
       </main>
+      <Footer />
     </div>
   )
 }
