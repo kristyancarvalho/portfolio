@@ -26,5 +26,21 @@
     "downloadResume": "Baixar currículo",
     "viewProjects": "Ver projetos",
     "availability": "Disponível para novos projetos"
+  },
+  "about": {
+    "eyebrow": "Perfil",
+    "title": "Sobre",
+    "bio": "Sou desenvolvedor full-stack com foco em aplicações modernas, performáticas e bem estruturadas. Construo APIs, interfaces web, ferramentas de terminal, automações e projetos open source. Gosto de transformar ideias em sistemas utilizáveis, com atenção a arquitetura, experiência do usuário, documentação e manutenção a longo prazo.",
+    "work": "Trabalho com foco em código claro e bem tipado, decisões pragmáticas e atenção a documentação, testes e manutenção a longo prazo.",
+    "stackTitle": "Stack principal",
+    "interestsTitle": "Interesses técnicos",
+    "interests": [
+      "APIs e desenvolvimento backend",
+      "Ferramentas de terminal (CLI e TUI)",
+      "Automação e developer experience",
+      "Open source",
+      "Performance e arquitetura limpa",
+      "Documentação técnica"
+    ]
   }
 }
