@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'motion/react'
+import { m, useReducedMotion } from 'motion/react'
 import type { ReactNode } from 'react'
 
 export type RevealProps = {
@@ -10,7 +10,7 @@ export type RevealProps = {
 
 export function Reveal({ children, className, delay = 0, as = 'div' }: RevealProps) {
   const reduceMotion = useReducedMotion()
-  const Component = as === 'li' ? motion.li : motion.div
+  const Component = as === 'li' ? m.li : m.div
 
   return (
     <Component

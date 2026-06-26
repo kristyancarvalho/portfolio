@@ -1,5 +1,5 @@
 import { ArrowDown } from 'lucide-react'
-import { motion, useReducedMotion } from 'motion/react'
+import { m, useReducedMotion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { HeroArtifact } from '@/widgets/hero/HeroArtifact'
 import { ResumeButton } from '@/features/resume-download/ResumeButton'
@@ -15,7 +15,7 @@ export function HeroSection() {
   return (
     <section id="home" className="relative flex min-h-screen items-center pb-20 pt-28">
       <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <motion.div
+        <m.div
           className="flex flex-col items-start gap-6"
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,16 +47,16 @@ export function HeroSection() {
           </div>
 
           <SocialLinks className="pt-1" />
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="relative flex justify-center lg:justify-end"
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
         >
           <HeroArtifact className="max-w-md" />
-        </motion.div>
+        </m.div>
       </Container>
     </section>
   )
