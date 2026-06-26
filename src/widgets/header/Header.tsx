@@ -1,13 +1,16 @@
 import { useState } from 'react'
+import { m } from 'motion/react'
 import { Github, Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '@/features/language-switcher/LanguageSwitcher'
 import { ThemeToggle } from '@/features/theme-toggle/ThemeToggle'
 import { Container } from '@/shared/ui/Container'
 import { IconLink } from '@/shared/ui/IconLink'
+import { ScrollProgress } from '@/shared/ui/ScrollProgress'
 import { navItems } from '@/shared/config/navigation'
 import { siteConfig } from '@/shared/config/site'
 import { cn } from '@/shared/lib/cn'
+import { springTransition } from '@/shared/lib/motion'
 import { useActiveSection } from '@/widgets/header/useActiveSection'
 import { useScrolled } from '@/widgets/header/useScrolled'
 
@@ -21,6 +24,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 pt-3 sm:pt-4">
+      <ScrollProgress />
       <Container>
         <div
           className={cn(
@@ -56,7 +60,11 @@ export function Header() {
                 >
                   {t(item.labelKey)}
                   {isActive ? (
-                    <span className="absolute -bottom-0.5 left-1/2 h-0.5 w-5 -translate-x-1/2 rounded-full bg-primary" />
+                    <m.span
+                      layoutId="nav-active-indicator"
+                      transition={springTransition}
+                      className="absolute inset-x-2.5 -bottom-0.5 h-0.5 rounded-full bg-primary"
+                    />
                   ) : null}
                 </a>
               )
