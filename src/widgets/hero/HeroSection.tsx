@@ -2,6 +2,7 @@ import { ArrowDown } from 'lucide-react'
 import { m } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { HeroArtifact } from '@/widgets/hero/HeroArtifact'
+import { Blob, DotField, OrbitRing } from '@/widgets/decoration/Shapes'
 import { ResumeButton } from '@/features/resume-download/ResumeButton'
 import { Container } from '@/shared/ui/Container'
 import { SocialLinks } from '@/shared/ui/SocialLinks'
@@ -12,7 +13,18 @@ export function HeroSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="home" className="relative flex min-h-screen items-center pb-20 pt-28">
+    <section
+      id="home"
+      className="relative isolate flex min-h-screen items-center overflow-hidden pb-20 pt-28"
+    >
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <Blob className="right-[6%] top-[6%] h-72 w-72" tone="accent" />
+        <OrbitRing
+          className="right-[-3rem] top-[26%] hidden h-72 w-72 lg:block"
+          duration={70}
+        />
+        <DotField className="bottom-[10%] left-[-1.5rem] h-44 w-44" />
+      </div>
       <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <m.div
           className="flex flex-col items-start gap-6"
