@@ -64,5 +64,10 @@
       "message": "Mensagem",
       "send": "Enviar mensagem"
     }
+  },
+  "footer": {
+    "tagline": "Desenvolvedor full-stack construindo software prático e bem estruturado.",
+    "rights": "Todos os direitos reservados.",
+    "builtWith": "Construído com React, TypeScript e Tailwind CSS."
   }
 }
