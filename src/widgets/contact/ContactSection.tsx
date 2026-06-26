@@ -1,9 +1,29 @@
+import { lazy, Suspense } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ContactForm } from '@/features/contact-form/ContactForm'
 import { Card } from '@/shared/ui/Card'
 import { Reveal } from '@/shared/ui/Reveal'
 import { Section } from '@/shared/ui/Section'
 import { SocialLinks } from '@/shared/ui/SocialLinks'
+
+const ContactForm = lazy(() =>
+  import('@/features/contact-form/ContactForm').then((module) => ({
+    default: module.ContactForm,
+  })),
+)
+
+function ContactFormFallback() {
+  return (
+    <div className="flex flex-col gap-4" aria-hidden="true">
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="h-16 animate-pulse rounded-xl bg-surface-soft" />
+        <div className="h-16 animate-pulse rounded-xl bg-surface-soft" />
+      </div>
+      <div className="h-16 animate-pulse rounded-xl bg-surface-soft" />
+      <div className="h-32 animate-pulse rounded-xl bg-surface-soft" />
+      <div className="h-11 w-40 animate-pulse rounded-full bg-surface-soft" />
+    </div>
+  )
+}
 
 export function ContactSection() {
   const { t } = useTranslation()
@@ -25,7 +45,9 @@ export function ContactSection() {
 
         <Reveal delay={0.1}>
           <Card className="p-6 sm:p-8">
-            <ContactForm />
+            <Suspense fallback={<ContactFormFallback />}>
+              <ContactForm />
+            </Suspense>
           </Card>
         </Reveal>
       </div>

@@ -1,3 +1,4 @@
+import { LazyMotion, domAnimation } from 'motion/react'
 import { Header } from '@/widgets/header/Header'
 import { HeroSection } from '@/widgets/hero/HeroSection'
 import { AboutSection } from '@/widgets/about/AboutSection'
@@ -12,17 +13,19 @@ export function App() {
   useDocumentMeta()
 
   return (
-    <div className="relative min-h-screen">
-      <BackgroundDecoration />
-      <Header />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <PostsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <LazyMotion features={domAnimation} strict>
+      <div className="relative min-h-screen">
+        <BackgroundDecoration />
+        <Header />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ProjectsSection />
+          <PostsSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
+    </LazyMotion>
   )
 }

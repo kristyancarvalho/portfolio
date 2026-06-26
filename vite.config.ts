@@ -40,4 +40,25 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes('node_modules')) {
+            return undefined
+          }
+          if (id.includes('motion') || id.includes('framer-motion')) {
+            return 'motion'
+          }
+          if (id.includes('i18next') || id.includes('react-i18next')) {
+            return 'i18n'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
+          }
+          return undefined
+        },
+      },
+    },
+  },
 })
