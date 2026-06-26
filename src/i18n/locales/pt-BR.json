@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "posts": "Posts",
+    "contact": "Contato",
+    "menu": "Abrir menu",
+    "close": "Fechar menu"
+  },
+  "language": {
+    "label": "Selecionar idioma",
+    "pt-BR": "Português",
+    "en": "Inglês"
+  }
+}
