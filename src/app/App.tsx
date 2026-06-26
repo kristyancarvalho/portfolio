@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import { Header } from '@/widgets/header/Header'
 import { HeroSection } from '@/widgets/hero/HeroSection'
+import { BackgroundDecoration } from '@/widgets/decoration/BackgroundDecoration'
 import { Section } from '@/shared/ui/Section'
 
 export function App() {
   const { t } = useTranslation()
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen">
+      <BackgroundDecoration />
       <Header />
       <main>
         <HeroSection />
