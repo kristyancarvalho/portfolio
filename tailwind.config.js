@@ -46,6 +46,7 @@ export default {
           'Liberation Mono',
           'monospace',
         ],
+        signature: ['Caveat', 'ui-sans-serif', 'cursive'],
       },
       boxShadow: {
         sm: 'var(--shadow-sm)',
