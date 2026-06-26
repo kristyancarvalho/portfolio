@@ -12,5 +12,11 @@
     "label": "Select language",
     "pt-BR": "Portuguese",
     "en": "English"
+  },
+  "theme": {
+    "label": "Toggle theme",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme"
   }
 }

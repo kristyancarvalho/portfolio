@@ -12,5 +12,11 @@
     "label": "Selecionar idioma",
     "pt-BR": "Português",
     "en": "Inglês"
+  },
+  "theme": {
+    "label": "Alternar tema",
+    "light": "Tema claro",
+    "dark": "Tema escuro",
+    "system": "Tema do sistema"
   }
 }
