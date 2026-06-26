@@ -1,21 +1,34 @@
 import { useTranslation } from 'react-i18next'
-import { LanguageSwitcher } from '@/features/language-switcher/LanguageSwitcher'
-import { ThemeToggle } from '@/features/theme-toggle/ThemeToggle'
-import { Container } from '@/shared/ui/Container'
+import { Header } from '@/widgets/header/Header'
+import { Section } from '@/shared/ui/Section'
 
 export function App() {
   const { t } = useTranslation()
 
   return (
-    <main className="flex min-h-screen items-center">
-      <Container className="flex flex-col items-center gap-6 text-center">
-        <div className="flex items-center gap-3">
-          <LanguageSwitcher />
-          <ThemeToggle />
-        </div>
-        <h1 className="type-display">Kristyan Carvalho</h1>
-        <p className="type-subheading">{t('nav.home')}</p>
-      </Container>
-    </main>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <section
+          id="home"
+          className="flex min-h-screen flex-col items-center justify-center gap-4 px-6 text-center"
+        >
+          <h1 className="type-display">Kristyan Carvalho</h1>
+          <p className="type-subheading">Full-Stack Developer</p>
+        </section>
+        <Section id="about" className="bg-background-soft">
+          <h2 className="type-heading">{t('nav.about')}</h2>
+        </Section>
+        <Section id="projects">
+          <h2 className="type-heading">{t('nav.projects')}</h2>
+        </Section>
+        <Section id="posts" className="bg-background-soft">
+          <h2 className="type-heading">{t('nav.posts')}</h2>
+        </Section>
+        <Section id="contact">
+          <h2 className="type-heading">{t('nav.contact')}</h2>
+        </Section>
+      </main>
+    </div>
   )
 }

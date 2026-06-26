@@ -6,7 +6,8 @@
     "posts": "Posts",
     "contact": "Contact",
     "menu": "Open menu",
-    "close": "Close menu"
+    "close": "Close menu",
+    "primary": "Primary navigation"
   },
   "language": {
     "label": "Select language",
