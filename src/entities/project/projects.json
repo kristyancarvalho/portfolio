@@ -1,0 +1,110 @@
+[
+  {
+    "id": "rendermd",
+    "featured": true,
+    "platform": "CLI · TUI",
+    "category": "Open Source",
+    "stack": ["Go", "Markdown", "Terminal UI", "Fuzzy Search"],
+    "title": {
+      "pt-BR": "rendermd",
+      "en": "rendermd"
+    },
+    "description": {
+      "pt-BR": "Renderizador de Markdown para terminal, leve, com saída colorida por sintaxe, hot reload e busca fuzzy para leitura rápida de arquivos locais.",
+      "en": "Lightweight terminal Markdown renderer with syntax-aware output, hot reload and fuzzy search for fast local reading."
+    },
+    "links": {
+      "github": "https://github.com/kristyancarvalho/rendermd"
+    }
+  },
+  {
+    "id": "aurview",
+    "featured": true,
+    "platform": "CLI · TUI",
+    "category": "Open Source",
+    "stack": ["Go", "Arch Linux", "AUR", "Terminal UI"],
+    "title": {
+      "pt-BR": "aurview",
+      "en": "aurview"
+    },
+    "description": {
+      "pt-BR": "Navegador de pacotes no terminal para usuários de Arch Linux e AUR: pesquise metadados, compare resultados, inspecione detalhes e copie nomes de pacotes sem sair do terminal.",
+      "en": "Terminal package browser for Arch Linux and AUR users: search metadata, compare results, inspect details and copy package names without leaving the terminal."
+    },
+    "links": {
+      "github": "https://github.com/kristyancarvalho/aurview"
+    }
+  },
+  {
+    "id": "tux-letter",
+    "featured": true,
+    "platform": "CLI · Service",
+    "category": "Open Source",
+    "stack": ["Go", "Linux", "RSS", "AI", "Email"],
+    "title": {
+      "pt-BR": "tux-letter",
+      "en": "tux-letter"
+    },
+    "description": {
+      "pt-BR": "Serviço de newsletter em binário único para notícias de Linux e open source. Coleta artigos dos sites listados, lê as fontes e sintetiza uma única newsletter escrita por IA, entregue por e-mail.",
+      "en": "Single-binary newsletter service for Linux and open-source news. It collects articles from listed sites, reads the sources and synthesizes a single AI-written newsletter delivered by email."
+    },
+    "links": {
+      "github": "https://github.com/kristyancarvalho/tux-letter"
+    }
+  },
+  {
+    "id": "msvg",
+    "featured": false,
+    "platform": "CLI · Library",
+    "category": "Open Source",
+    "stack": ["TypeScript", "SVG", "YAML", "Markdown"],
+    "title": {
+      "pt-BR": "MSVG",
+      "en": "MSVG"
+    },
+    "description": {
+      "pt-BR": "Gera diagramas SVG limpos e acessíveis a partir de sintaxe YAML embutida em Markdown, mantendo os diagramas próximos da documentação e da escrita técnica.",
+      "en": "Generates clean, accessible SVG diagrams from YAML syntax embedded in Markdown, keeping diagrams close to documentation and technical writing."
+    },
+    "links": {
+      "github": "https://github.com/kristyancarvalho/msvg"
+    }
+  },
+  {
+    "id": "gitpulse",
+    "featured": false,
+    "platform": "Service",
+    "category": "Open Source",
+    "stack": ["Go", "GitHub API", "SVG"],
+    "title": {
+      "pt-BR": "GitPulse",
+      "en": "GitPulse"
+    },
+    "description": {
+      "pt-BR": "Renderiza sua contribuição mais recente no GitHub como uma imagem dinâmica com o nome do repositório e a linguagem principal, pronta para badges de README.",
+      "en": "Renders your latest GitHub contribution as a dynamic image showing the repository name and main language, ready for README badges."
+    },
+    "links": {
+      "github": "https://github.com/kristyancarvalho/gitpulse"
+    }
+  },
+  {
+    "id": "openpilot-nvim",
+    "featured": false,
+    "platform": "Neovim",
+    "category": "Open Source",
+    "stack": ["Lua", "Neovim"],
+    "title": {
+      "pt-BR": "openpilot.nvim",
+      "en": "openpilot.nvim"
+    },
+    "description": {
+      "pt-BR": "Plugin para Neovim focado em trazer programação assistida por IA e automação para o fluxo do editor.",
+      "en": "Neovim plugin focused on bringing AI-assisted coding and automation into the editor workflow."
+    },
+    "links": {
+      "github": "https://github.com/kristyancarvalho/openpilot.nvim"
+    }
+  }
+]
