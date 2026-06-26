@@ -3,6 +3,7 @@ import { Header } from '@/widgets/header/Header'
 import { HeroSection } from '@/widgets/hero/HeroSection'
 import { AboutSection } from '@/widgets/about/AboutSection'
 import { ProjectsSection } from '@/widgets/projects/ProjectsSection'
+import { ContactSection } from '@/widgets/contact/ContactSection'
 import { BackgroundDecoration } from '@/widgets/decoration/BackgroundDecoration'
 import { Section } from '@/shared/ui/Section'
 
@@ -20,9 +21,7 @@ export function App() {
         <Section id="posts" className="bg-background-soft">
           <h2 className="type-heading">{t('nav.posts')}</h2>
         </Section>
-        <Section id="contact">
-          <h2 className="type-heading">{t('nav.contact')}</h2>
-        </Section>
+        <ContactSection />
       </main>
     </div>
   )
