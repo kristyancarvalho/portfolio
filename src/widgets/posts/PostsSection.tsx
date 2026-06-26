@@ -5,9 +5,11 @@ import { PostCard } from '@/entities/post/PostCard'
 import { fetchLatestPosts } from '@/entities/post/postService'
 import type { BlogPost } from '@/entities/post/model'
 import { Button } from '@/shared/ui/Button'
+import { ButtonLink } from '@/shared/ui/ButtonLink'
 import { Container } from '@/shared/ui/Container'
-import { Reveal } from '@/shared/ui/Reveal'
-import { buttonVariants } from '@/shared/ui/buttonVariants'
+import { SectionHeading } from '@/shared/ui/SectionHeading'
+import { Stagger, StaggerItem } from '@/shared/ui/Stagger'
+import { DiagonalLines, DotField } from '@/widgets/decoration/Shapes'
 import { siteConfig } from '@/shared/config/site'
 
 type Status = 'loading' | 'error' | 'success'
@@ -44,14 +46,18 @@ export function PostsSection() {
   return (
     <section
       id="posts"
-      className="relative scroll-mt-24 overflow-hidden bg-background-soft py-20 sm:py-28"
+      className="relative isolate scroll-mt-24 overflow-hidden bg-background-soft py-20 sm:py-28"
     >
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <DiagonalLines className="right-0 top-0 h-48 w-1/2" />
+        <DotField className="bottom-24 right-[-2rem] h-40 w-40" />
+      </div>
       <Container>
-        <Reveal>
-          <p className="type-badge text-primary">{t('posts.eyebrow')}</p>
-          <h2 className="type-heading mt-2">{t('posts.title')}</h2>
-          <p className="type-body-muted mt-3 max-w-2xl">{t('posts.subtitle')}</p>
-        </Reveal>
+        <SectionHeading
+          eyebrow={t('posts.eyebrow')}
+          title={t('posts.title')}
+          subtitle={t('posts.subtitle')}
+        />
 
         {status === 'loading' ? (
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-hidden="true">
@@ -93,25 +99,26 @@ export function PostsSection() {
         ) : null}
 
         {status === 'success' && posts.length > 0 ? (
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post, index) => (
-              <Reveal key={post.url} as="li" delay={Math.min(index * 0.08, 0.24)} className="h-full">
+          <Stagger as="ul" className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+              <StaggerItem key={post.url} as="li" className="h-full">
                 <PostCard post={post} />
-              </Reveal>
+              </StaggerItem>
             ))}
-          </ul>
+          </Stagger>
         ) : null}
 
         <div className="relative z-10 mt-12 flex justify-center">
-          <a
+          <ButtonLink
             href={siteConfig.blogUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className={buttonVariants({ variant: 'outline', size: 'md' })}
+            variant="outline"
+            size="md"
           >
             {t('posts.viewMore')}
             <ArrowUpRight className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
-          </a>
+          </ButtonLink>
         </div>
       </Container>
 

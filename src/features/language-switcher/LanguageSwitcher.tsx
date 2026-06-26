@@ -1,6 +1,9 @@
+import { useId } from 'react'
+import { m } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { persistLanguage, supportedLanguages, type Language } from '@/i18n'
 import { cn } from '@/shared/lib/cn'
+import { interactiveTap, springTransition } from '@/shared/lib/motion'
 
 const shortLabels: Record<Language, string> = {
   'pt-BR': 'PT',
@@ -9,6 +12,7 @@ const shortLabels: Record<Language, string> = {
 
 export function LanguageSwitcher({ className }: { className?: string }) {
   const { i18n, t } = useTranslation()
+  const pillId = useId()
   const current = (supportedLanguages.find((language) => i18n.language === language) ??
     supportedLanguages[0]) as Language
 
@@ -32,21 +36,31 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       {supportedLanguages.map((language) => {
         const isActive = current === language
         return (
-          <button
+          <m.button
             key={language}
             type="button"
             aria-pressed={isActive}
             aria-label={t(`language.${language}`)}
             onClick={() => changeLanguage(language)}
-            className={cn(
-              'rounded-full px-2.5 py-1 text-xs font-semibold transition-colors duration-200',
-              isActive
-                ? 'bg-primary text-white'
-                : 'text-text-muted hover:text-text',
-            )}
+            whileTap={interactiveTap}
+            className="relative rounded-full px-2.5 py-1 text-xs font-semibold transition-colors duration-200"
           >
-            {shortLabels[language]}
-          </button>
+            {isActive ? (
+              <m.span
+                layoutId={`language-active-${pillId}`}
+                transition={springTransition}
+                className="absolute inset-0 rounded-full bg-primary"
+              />
+            ) : null}
+            <span
+              className={cn(
+                'relative z-10',
+                isActive ? 'text-white' : 'text-text-muted hover:text-text',
+              )}
+            >
+              {shortLabels[language]}
+            </span>
+          </m.button>
         )
       })}
     </div>

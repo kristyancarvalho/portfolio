@@ -4,7 +4,9 @@ import { ProjectCard } from '@/entities/project/ProjectCard'
 import { projects } from '@/entities/project/projects'
 import { Reveal } from '@/shared/ui/Reveal'
 import { Section } from '@/shared/ui/Section'
-import { buttonVariants } from '@/shared/ui/buttonVariants'
+import { SectionHeading } from '@/shared/ui/SectionHeading'
+import { Stagger, StaggerItem } from '@/shared/ui/Stagger'
+import { ButtonLink } from '@/shared/ui/ButtonLink'
 import { siteConfig } from '@/shared/config/site'
 
 const orderedProjects = [...projects].sort(
@@ -16,35 +18,31 @@ export function ProjectsSection() {
 
   return (
     <Section id="projects">
-      <Reveal>
-        <p className="type-badge text-primary">{t('projects.eyebrow')}</p>
-        <h2 className="type-heading mt-2">{t('projects.title')}</h2>
-        <p className="type-body-muted mt-3 max-w-2xl">{t('projects.subtitle')}</p>
-      </Reveal>
+      <SectionHeading
+        eyebrow={t('projects.eyebrow')}
+        title={t('projects.title')}
+        subtitle={t('projects.subtitle')}
+      />
 
-      <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {orderedProjects.map((project, index) => (
-          <Reveal
-            key={project.id}
-            as="li"
-            delay={Math.min(index * 0.06, 0.3)}
-            className="h-full"
-          >
+      <Stagger as="ul" className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {orderedProjects.map((project) => (
+          <StaggerItem key={project.id} as="li" className="h-full">
             <ProjectCard project={project} />
-          </Reveal>
+          </StaggerItem>
         ))}
-      </ul>
+      </Stagger>
 
       <Reveal className="mt-10 flex justify-center">
-        <a
+        <ButtonLink
           href={siteConfig.social.github}
           target="_blank"
           rel="noreferrer noopener"
-          className={buttonVariants({ variant: 'outline', size: 'md' })}
+          variant="outline"
+          size="md"
         >
           <Github className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
           {t('projects.githubProfile')}
-        </a>
+        </ButtonLink>
       </Reveal>
     </Section>
   )
