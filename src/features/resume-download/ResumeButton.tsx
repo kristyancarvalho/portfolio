@@ -1,12 +1,11 @@
 import { Download } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { ButtonLink } from '@/shared/ui/ButtonLink'
 import {
-  buttonVariants,
   type ButtonSize,
   type ButtonVariant,
 } from '@/shared/ui/buttonVariants'
 import { siteConfig } from '@/shared/config/site'
-import { cn } from '@/shared/lib/cn'
 
 export type ResumeButtonProps = {
   variant?: ButtonVariant
@@ -24,13 +23,9 @@ export function ResumeButton({
   const resumeHref = siteConfig.resume[language]
 
   return (
-    <a
-      href={resumeHref}
-      download
-      className={cn(buttonVariants({ variant, size }), className)}
-    >
+    <ButtonLink href={resumeHref} download variant={variant} size={size} className={className}>
       <Download className="h-[1.1rem] w-[1.1rem]" aria-hidden="true" />
       {t('hero.downloadResume')}
-    </a>
+    </ButtonLink>
   )
 }

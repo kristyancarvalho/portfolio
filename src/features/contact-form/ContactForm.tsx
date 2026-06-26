@@ -1,5 +1,6 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
-import { Send } from 'lucide-react'
+import { AnimatePresence, m } from 'motion/react'
+import { Loader2, Send } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import {
   ContactNotConfiguredError,
@@ -13,6 +14,7 @@ import {
 import { Button } from '@/shared/ui/Button'
 import { TextAreaField, TextField } from '@/shared/ui/Field'
 import { cn } from '@/shared/lib/cn'
+import { quickTransition } from '@/shared/lib/motion'
 
 type ContactValues = Record<ContactField, string>
 
@@ -124,16 +126,35 @@ export function ContactForm() {
         error={errors.message ? t(errors.message) : undefined}
       />
       <Button type="submit" className="self-start" disabled={status === 'submitting'}>
-        <Send className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
+        {status === 'submitting' ? (
+          <m.span
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, ease: 'linear', duration: 0.8 }}
+            className="inline-flex"
+          >
+            <Loader2 className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
+          </m.span>
+        ) : (
+          <Send className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
+        )}
         {status === 'submitting' ? t('contact.form.sending') : t('contact.form.send')}
       </Button>
-      <p
-        role="status"
-        aria-live="polite"
-        className={cn('min-h-[1.25rem] text-sm', statusMessage && statusTone)}
-      >
-        {statusMessage}
-      </p>
+      <div role="status" aria-live="polite" className="min-h-[1.25rem]">
+        <AnimatePresence mode="wait">
+          {statusMessage ? (
+            <m.p
+              key={status}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={quickTransition}
+              className={cn('text-sm', statusTone)}
+            >
+              {statusMessage}
+            </m.p>
+          ) : null}
+        </AnimatePresence>
+      </div>
     </form>
   )
 }

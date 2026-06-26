@@ -7,21 +7,19 @@ import {
 } from '@/shared/ui/buttonVariants'
 import { interactiveHover, interactiveTap, springTransition } from '@/shared/lib/motion'
 
-export type ButtonProps = HTMLMotionProps<'button'> & {
+export type ButtonLinkProps = HTMLMotionProps<'a'> & {
   variant?: ButtonVariant
   size?: ButtonSize
 }
 
-export function Button({
+export function ButtonLink({
   variant,
   size,
   className,
-  type = 'button',
   ...props
-}: ButtonProps) {
+}: ButtonLinkProps) {
   return (
-    <m.button
-      type={type}
+    <m.a
       whileHover={interactiveHover}
       whileTap={interactiveTap}
       transition={springTransition}

@@ -5,8 +5,7 @@ import { HeroArtifact } from '@/widgets/hero/HeroArtifact'
 import { ResumeButton } from '@/features/resume-download/ResumeButton'
 import { Container } from '@/shared/ui/Container'
 import { SocialLinks } from '@/shared/ui/SocialLinks'
-import { buttonVariants } from '@/shared/ui/buttonVariants'
-import { cn } from '@/shared/lib/cn'
+import { ButtonLink } from '@/shared/ui/ButtonLink'
 import { baseTransition, staggerContainer, staggerItem } from '@/shared/lib/motion'
 
 export function HeroSection() {
@@ -42,13 +41,10 @@ export function HeroSection() {
 
           <m.div variants={staggerItem} className="flex flex-wrap items-center gap-3">
             <ResumeButton size="lg" />
-            <a
-              href="#projects"
-              className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
-            >
+            <ButtonLink href="#projects" variant="outline" size="lg">
               {t('hero.viewProjects')}
               <ArrowDown className="h-[1.1rem] w-[1.1rem]" aria-hidden="true" />
-            </a>
+            </ButtonLink>
           </m.div>
 
           <m.div variants={staggerItem}>
