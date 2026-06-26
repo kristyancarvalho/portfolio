@@ -13,7 +13,7 @@ import { baseTransition, durations, easeSoft, staggerItem } from '@/shared/lib/m
 const lowerGroup = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.7 },
+    transition: { staggerChildren: 0.12, delayChildren: 1.05 },
   },
 }
 
@@ -45,19 +45,19 @@ export function HeroSection() {
             {t('hero.availability')}
           </m.span>
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             <HeroName name="Kristyan Carvalho" />
             <m.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: durations.base, ease: easeSoft, delay: 0.55 }}
+              transition={{ duration: durations.base, ease: easeSoft, delay: 0.9 }}
               className="flex items-center gap-3"
             >
               <m.span
                 aria-hidden="true"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
-                transition={{ duration: 0.5, ease: easeSoft, delay: 0.7 }}
+                transition={{ duration: 0.5, ease: easeSoft, delay: 1.05 }}
                 className="h-px w-10 origin-left rounded-full bg-gradient-to-r from-primary to-accent sm:w-12"
               />
               <span className="text-lg font-medium text-primary sm:text-xl">
