@@ -1,18 +1,16 @@
-import { ArrowDown, Download } from 'lucide-react'
+import { ArrowDown } from 'lucide-react'
 import { motion, useReducedMotion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { HeroArtifact } from '@/widgets/hero/HeroArtifact'
+import { ResumeButton } from '@/features/resume-download/ResumeButton'
 import { Container } from '@/shared/ui/Container'
 import { SocialLinks } from '@/shared/ui/SocialLinks'
 import { buttonVariants } from '@/shared/ui/buttonVariants'
-import { siteConfig } from '@/shared/config/site'
 import { cn } from '@/shared/lib/cn'
 
 export function HeroSection() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const reduceMotion = useReducedMotion()
-  const language = i18n.language === 'en' ? 'en' : 'pt-BR'
-  const resumeHref = siteConfig.resume[language]
 
   return (
     <section id="home" className="relative flex min-h-screen items-center pb-20 pt-28">
@@ -38,14 +36,7 @@ export function HeroSection() {
           <p className="type-body-muted max-w-xl text-pretty">{t('hero.intro')}</p>
 
           <div className="flex flex-wrap items-center gap-3">
-            <a
-              href={resumeHref}
-              download
-              className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}
-            >
-              <Download className="h-[1.1rem] w-[1.1rem]" aria-hidden="true" />
-              {t('hero.downloadResume')}
-            </a>
+            <ResumeButton size="lg" />
             <a
               href="#projects"
               className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
