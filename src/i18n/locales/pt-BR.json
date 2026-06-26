@@ -19,5 +19,12 @@
     "light": "Tema claro",
     "dark": "Tema escuro",
     "system": "Tema do sistema"
+  },
+  "hero": {
+    "title": "Desenvolvedor Full-Stack",
+    "intro": "Construo aplicações web, APIs, ferramentas de terminal e automações com foco em performance, arquitetura limpa e boas interfaces.",
+    "downloadResume": "Baixar currículo",
+    "viewProjects": "Ver projetos",
+    "availability": "Disponível para novos projetos"
   }
 }

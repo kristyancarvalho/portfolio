@@ -19,5 +19,12 @@
     "light": "Light theme",
     "dark": "Dark theme",
     "system": "System theme"
+  },
+  "hero": {
+    "title": "Full-Stack Developer",
+    "intro": "I build web applications, APIs, terminal tools and automations with a focus on performance, clean architecture and good interfaces.",
+    "downloadResume": "Download resume",
+    "viewProjects": "View projects",
+    "availability": "Available for new projects"
   }
 }
