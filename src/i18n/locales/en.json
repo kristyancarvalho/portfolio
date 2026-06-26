@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Kristyan Carvalho — Full-Stack Developer",
+    "description": "Portfolio of Kristyan Carvalho, full-stack developer focused on web applications, APIs, terminal tools, Linux, automation and open source."
+  },
   "nav": {
     "home": "Home",
     "about": "About",
