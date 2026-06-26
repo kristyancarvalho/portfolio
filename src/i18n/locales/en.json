@@ -30,7 +30,7 @@
   },
   "hero": {
     "title": "Full-Stack Developer",
-    "intro": "I build web applications, APIs, terminal tools and automations with a focus on performance, clean architecture and good interfaces.",
+    "intro": "I build <hi>web applications</hi>, <hi>APIs</hi>, terminal tools and automations with a focus on <hi>performance</hi>, clean architecture and good interfaces.",
     "downloadResume": "Download resume",
     "viewProjects": "View projects",
     "availability": "Available for new projects"

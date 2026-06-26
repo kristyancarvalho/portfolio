@@ -1,13 +1,19 @@
 import { ArrowDown } from 'lucide-react'
 import { m } from 'motion/react'
-import { useTranslation } from 'react-i18next'
-import { HeroArtifact } from '@/widgets/hero/HeroArtifact'
-import { Blob, DotField, OrbitRing } from '@/widgets/decoration/Shapes'
+import { Trans, useTranslation } from 'react-i18next'
+import { HeroName } from '@/widgets/hero/HeroName'
+import { Blob, OrbitRing } from '@/widgets/decoration/Shapes'
 import { ResumeButton } from '@/features/resume-download/ResumeButton'
 import { Container } from '@/shared/ui/Container'
 import { SocialLinks } from '@/shared/ui/SocialLinks'
 import { ButtonLink } from '@/shared/ui/ButtonLink'
-import { baseTransition, staggerContainer, staggerItem } from '@/shared/lib/motion'
+import { durations, easeSoft } from '@/shared/lib/motion'
+
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: durations.base, ease: easeSoft, delay },
+})
 
 export function HeroSection() {
   const { t } = useTranslation()
@@ -18,40 +24,55 @@ export function HeroSection() {
       className="relative isolate flex min-h-screen items-center overflow-hidden pb-20 pt-28"
     >
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <Blob className="right-[6%] top-[6%] h-72 w-72" tone="accent" />
-        <OrbitRing
-          className="right-[-3rem] top-[26%] hidden h-72 w-72 lg:block"
-          duration={70}
+        <Blob className="left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2" />
+        <Blob
+          className="left-[16%] top-[22%] hidden h-64 w-64 sm:block"
+          tone="accent"
         />
-        <DotField className="bottom-[10%] left-[-1.5rem] h-44 w-44" />
+        <OrbitRing
+          className="left-1/2 top-1/2 hidden h-[44rem] w-[44rem] -translate-x-1/2 -translate-y-1/2 opacity-60 lg:block"
+          duration={110}
+        />
       </div>
-      <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <m.div
-          className="flex flex-col items-start gap-6"
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-        >
+
+      <Container>
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-7 text-center">
           <m.span
-            variants={staggerItem}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text-muted"
+            {...fadeUp(0.05)}
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3 py-1 text-xs font-medium text-text-muted backdrop-blur-sm"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-success" />
             {t('hero.availability')}
           </m.span>
 
-          <m.div variants={staggerItem} className="flex flex-col gap-3">
-            <h1 className="type-display">Kristyan Carvalho</h1>
-            <p className="text-xl font-medium text-primary sm:text-2xl">
-              {t('hero.title')}
-            </p>
-          </m.div>
+          <div className="flex flex-col items-center gap-5">
+            <HeroName name="Kristyan Carvalho" />
+            <m.div
+              {...fadeUp(0.45)}
+              className="flex items-center gap-2.5 text-primary sm:gap-3"
+            >
+              <span className="h-px w-7 rounded-full bg-gradient-to-r from-transparent to-primary sm:w-10" />
+              <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.16em] sm:text-base sm:tracking-[0.22em]">
+                {t('hero.title')}
+              </span>
+              <span className="h-px w-7 rounded-full bg-gradient-to-l from-transparent to-primary sm:w-10" />
+            </m.div>
+          </div>
 
-          <m.p variants={staggerItem} className="type-body-muted max-w-xl text-pretty">
-            {t('hero.intro')}
+          <m.p
+            {...fadeUp(0.58)}
+            className="max-w-2xl text-pretty text-base leading-relaxed text-text-muted sm:text-lg"
+          >
+            <Trans
+              i18nKey="hero.intro"
+              components={{ hi: <span className="font-semibold text-text" /> }}
+            />
           </m.p>
 
-          <m.div variants={staggerItem} className="flex flex-wrap items-center gap-3">
+          <m.div
+            {...fadeUp(0.72)}
+            className="flex flex-wrap items-center justify-center gap-3"
+          >
             <ResumeButton size="lg" />
             <ButtonLink href="#projects" variant="outline" size="lg">
               {t('hero.viewProjects')}
@@ -59,19 +80,10 @@ export function HeroSection() {
             </ButtonLink>
           </m.div>
 
-          <m.div variants={staggerItem}>
-            <SocialLinks className="pt-1" />
+          <m.div {...fadeUp(0.84)}>
+            <SocialLinks className="justify-center" />
           </m.div>
-        </m.div>
-
-        <m.div
-          className="relative flex justify-center lg:justify-end"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...baseTransition, delay: 0.2 }}
-        >
-          <HeroArtifact className="max-w-md" />
-        </m.div>
+        </div>
       </Container>
     </section>
   )
