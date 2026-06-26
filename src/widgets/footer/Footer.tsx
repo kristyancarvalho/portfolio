@@ -24,7 +24,7 @@ export function Footer() {
           </div>
 
           <nav
-            aria-label={t('nav.primary')}
+            aria-label={t('nav.footer')}
             className="grid grid-cols-2 gap-x-12 gap-y-2.5"
           >
             {navItems.map((item) => (

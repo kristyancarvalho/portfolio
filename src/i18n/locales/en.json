@@ -11,7 +11,11 @@
     "contact": "Contact",
     "menu": "Open menu",
     "close": "Close menu",
-    "primary": "Primary navigation"
+    "primary": "Primary navigation",
+    "footer": "Footer navigation"
+  },
+  "a11y": {
+    "skip": "Skip to content"
   },
   "language": {
     "label": "Select language",
