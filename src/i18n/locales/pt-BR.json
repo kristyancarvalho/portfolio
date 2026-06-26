@@ -42,5 +42,14 @@
       "Performance e arquitetura limpa",
       "Documentação técnica"
     ]
+  },
+  "projects": {
+    "eyebrow": "Trabalho",
+    "title": "Projetos",
+    "subtitle": "Uma seleção de projetos open source e ferramentas que construí.",
+    "featured": "Destaque",
+    "code": "Código",
+    "demo": "Demo",
+    "githubProfile": "Ver perfil no GitHub"
   }
 }
