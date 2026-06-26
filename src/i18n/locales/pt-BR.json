@@ -11,7 +11,11 @@
     "contact": "Contato",
     "menu": "Abrir menu",
     "close": "Fechar menu",
-    "primary": "Navegação principal"
+    "primary": "Navegação principal",
+    "footer": "Navegação do rodapé"
+  },
+  "a11y": {
+    "skip": "Pular para o conteúdo"
   },
   "language": {
     "label": "Selecionar idioma",
