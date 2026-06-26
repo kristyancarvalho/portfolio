@@ -6,7 +6,7 @@ import { Reveal } from '@/shared/ui/Reveal'
 import { Section } from '@/shared/ui/Section'
 import { SectionHeading } from '@/shared/ui/SectionHeading'
 import { Stagger, StaggerItem } from '@/shared/ui/Stagger'
-import { buttonVariants } from '@/shared/ui/buttonVariants'
+import { ButtonLink } from '@/shared/ui/ButtonLink'
 import { siteConfig } from '@/shared/config/site'
 
 const orderedProjects = [...projects].sort(
@@ -33,15 +33,16 @@ export function ProjectsSection() {
       </Stagger>
 
       <Reveal className="mt-10 flex justify-center">
-        <a
+        <ButtonLink
           href={siteConfig.social.github}
           target="_blank"
           rel="noreferrer noopener"
-          className={buttonVariants({ variant: 'outline', size: 'md' })}
+          variant="outline"
+          size="md"
         >
           <Github className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
           {t('projects.githubProfile')}
-        </a>
+        </ButtonLink>
       </Reveal>
     </Section>
   )

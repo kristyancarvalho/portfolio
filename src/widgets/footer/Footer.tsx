@@ -31,7 +31,7 @@ export function Footer() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-sm text-text-muted transition-colors hover:text-primary"
+                className="relative w-fit text-sm text-text-muted transition-colors hover:text-primary after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
               >
                 {t(item.labelKey)}
               </a>

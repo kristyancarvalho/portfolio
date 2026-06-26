@@ -5,10 +5,10 @@ import { PostCard } from '@/entities/post/PostCard'
 import { fetchLatestPosts } from '@/entities/post/postService'
 import type { BlogPost } from '@/entities/post/model'
 import { Button } from '@/shared/ui/Button'
+import { ButtonLink } from '@/shared/ui/ButtonLink'
 import { Container } from '@/shared/ui/Container'
 import { SectionHeading } from '@/shared/ui/SectionHeading'
 import { Stagger, StaggerItem } from '@/shared/ui/Stagger'
-import { buttonVariants } from '@/shared/ui/buttonVariants'
 import { siteConfig } from '@/shared/config/site'
 
 type Status = 'loading' | 'error' | 'success'
@@ -104,15 +104,16 @@ export function PostsSection() {
         ) : null}
 
         <div className="relative z-10 mt-12 flex justify-center">
-          <a
+          <ButtonLink
             href={siteConfig.blogUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className={buttonVariants({ variant: 'outline', size: 'md' })}
+            variant="outline"
+            size="md"
           >
             {t('posts.viewMore')}
             <ArrowUpRight className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
-          </a>
+          </ButtonLink>
         </div>
       </Container>
 
