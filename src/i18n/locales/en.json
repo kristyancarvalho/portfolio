@@ -62,7 +62,18 @@
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
-      "send": "Send message"
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent. Thanks for reaching out!",
+      "error": "The message could not be sent. Please try again.",
+      "notConfigured": "Sending is not configured yet. Try the links above."
+    },
+    "validation": {
+      "nameRequired": "Enter your name.",
+      "emailRequired": "Enter your email.",
+      "emailInvalid": "Enter a valid email.",
+      "subjectRequired": "Enter a subject.",
+      "messageRequired": "Write a message."
     }
   },
   "footer": {

@@ -62,7 +62,18 @@
       "email": "E-mail",
       "subject": "Assunto",
       "message": "Mensagem",
-      "send": "Enviar mensagem"
+      "send": "Enviar mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada. Obrigado pelo contato!",
+      "error": "Não foi possível enviar a mensagem. Tente novamente.",
+      "notConfigured": "O envio ainda não está configurado. Tente pelas redes acima."
+    },
+    "validation": {
+      "nameRequired": "Informe seu nome.",
+      "emailRequired": "Informe seu e-mail.",
+      "emailInvalid": "Informe um e-mail válido.",
+      "subjectRequired": "Informe o assunto.",
+      "messageRequired": "Escreva uma mensagem."
     }
   },
   "footer": {
