@@ -69,5 +69,16 @@
     "tagline": "Desenvolvedor full-stack construindo software prático e bem estruturado.",
     "rights": "Todos os direitos reservados.",
     "builtWith": "Construído com React, TypeScript e Tailwind CSS."
+  },
+  "posts": {
+    "eyebrow": "Blog",
+    "title": "Últimos posts",
+    "subtitle": "Notas e artigos sobre código, Linux e tecnologia.",
+    "viewMore": "Ver mais",
+    "read": "Ler post",
+    "loading": "Carregando posts...",
+    "empty": "Nenhum post encontrado.",
+    "error": "Não foi possível carregar os posts.",
+    "retry": "Tentar novamente"
   }
 }
