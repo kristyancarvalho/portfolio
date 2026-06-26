@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '@/shared/ui/Container'
 import { SocialLinks } from '@/shared/ui/SocialLinks'
+import { Blob, DotField } from '@/widgets/decoration/Shapes'
 import { navItems } from '@/shared/config/navigation'
 
 const currentYear = new Date().getFullYear()
@@ -9,7 +10,11 @@ export function Footer() {
   const { t } = useTranslation()
 
   return (
-    <footer className="border-t border-border bg-background-soft">
+    <footer className="relative isolate overflow-hidden border-t border-border bg-background-soft">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <Blob className="left-[-4rem] top-[-4rem] h-64 w-64" />
+        <DotField className="right-[-1rem] bottom-[-2rem] h-40 w-40" />
+      </div>
       <Container className="flex flex-col gap-10 py-12">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-sm space-y-4">
