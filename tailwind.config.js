@@ -46,7 +46,6 @@ export default {
           'Liberation Mono',
           'monospace',
         ],
-        signature: ['Herr Von Muellerhoff', 'ui-sans-serif', 'cursive'],
       },
       boxShadow: {
         sm: 'var(--shadow-sm)',
