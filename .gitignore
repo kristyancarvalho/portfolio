@@ -10,7 +10,8 @@ node_modules
 dist
 dist-ssr
 *.local
-specs/
+
+.vercel
 
 .vscode/*
 !.vscode/extensions.json
@@ -21,6 +22,9 @@ specs/
 *.njsproj
 *.sln
 *.sw?
-.env
 
-specs/
+.env
+.env.local
+.env.*.local
+
+/specs/
