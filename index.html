@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f8fc" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Kristyan Carvalho — Desenvolvedor Full-Stack</title>
+    <meta
+      name="description"
+      content="Portfólio de Kristyan Carvalho, desenvolvedor full-stack focado em aplicações web, APIs, ferramentas de terminal, Linux, automação e open source."
+    />
+    <meta name="author" content="Kristyan Carvalho" />
+    <link rel="canonical" href="https://kristyan.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kristyan Carvalho" />
+    <meta property="og:url" content="https://kristyan.dev/" />
+    <meta property="og:title" content="Kristyan Carvalho — Desenvolvedor Full-Stack" />
+    <meta
+      property="og:description"
+      content="Portfólio de Kristyan Carvalho, desenvolvedor full-stack focado em aplicações web, APIs, ferramentas de terminal, Linux, automação e open source."
+    />
+    <meta property="og:image" content="https://kristyan.dev/og-image.png" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kristyan Carvalho — Desenvolvedor Full-Stack" />
+    <meta
+      name="twitter:description"
+      content="Portfólio de Kristyan Carvalho, desenvolvedor full-stack focado em aplicações web, APIs, ferramentas de terminal, Linux, automação e open source."
+    />
+    <meta name="twitter:image" content="https://kristyan.dev/og-image.png" />
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('portfolio-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var resolved =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : prefersDark
+                ? 'dark'
+                : 'light';
+          var root = document.documentElement;
+          if (resolved === 'dark') {
+            root.classList.add('dark');
+          }
+          root.style.colorScheme = resolved;
+        } catch (error) {
+          void error;
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/app/main.tsx"></script>
+  </body>
+</html>

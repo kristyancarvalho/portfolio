@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Kristyan Carvalho — Full-Stack Developer",
+    "description": "Portfolio of Kristyan Carvalho, full-stack developer focused on web applications, APIs, terminal tools, Linux, automation and open source."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "posts": "Posts",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "primary": "Primary navigation",
+    "footer": "Footer navigation"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "language": {
+    "label": "Select language",
+    "pt-BR": "Portuguese",
+    "en": "English"
+  },
+  "theme": {
+    "label": "Toggle theme",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme"
+  },
+  "hero": {
+    "title": "Full-Stack Developer",
+    "intro": "I build web applications, APIs, terminal tools and automations with a focus on performance, clean architecture and good interfaces.",
+    "downloadResume": "Download resume",
+    "viewProjects": "View projects",
+    "availability": "Available for new projects"
+  },
+  "about": {
+    "eyebrow": "Profile",
+    "title": "About",
+    "bio": "I am a full-stack developer focused on modern, performant and well-structured applications. I build APIs, web interfaces, terminal tools, automations and open-source projects. I care about turning ideas into usable systems, with attention to architecture, user experience, documentation and long-term maintainability.",
+    "work": "I focus on clear, well-typed code, pragmatic decisions and attention to documentation, testing and long-term maintainability.",
+    "stackTitle": "Main stack",
+    "interestsTitle": "Technical interests",
+    "interests": [
+      "APIs and backend development",
+      "Terminal tools (CLI and TUI)",
+      "Automation and developer experience",
+      "Open source",
+      "Performance and clean architecture",
+      "Technical writing"
+    ]
+  },
+  "projects": {
+    "eyebrow": "Work",
+    "title": "Projects",
+    "subtitle": "A selection of open-source projects and tools I have built.",
+    "featured": "Featured",
+    "code": "Code",
+    "demo": "Demo",
+    "githubProfile": "View GitHub profile"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk",
+    "subtitle": "Have a project, idea or opportunity? Send a message.",
+    "socialLabel": "Or find me on",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent. Thanks for reaching out!",
+      "error": "The message could not be sent. Please try again.",
+      "notConfigured": "Sending is not configured yet. Try the links above."
+    },
+    "validation": {
+      "nameRequired": "Enter your name.",
+      "emailRequired": "Enter your email.",
+      "emailInvalid": "Enter a valid email.",
+      "subjectRequired": "Enter a subject.",
+      "messageRequired": "Write a message."
+    }
+  },
+  "footer": {
+    "tagline": "Full-stack developer building practical, well-structured software.",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with React, TypeScript and Tailwind CSS."
+  },
+  "posts": {
+    "eyebrow": "Blog",
+    "title": "Latest posts",
+    "subtitle": "Notes and articles about code, Linux and technology.",
+    "viewMore": "View more",
+    "read": "Read post",
+    "loading": "Loading posts...",
+    "empty": "No posts found.",
+    "error": "Could not load the posts.",
+    "retry": "Try again"
+  }
+}

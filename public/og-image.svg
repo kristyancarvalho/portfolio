@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1626" />
+      <stop offset="1" stop-color="#0f2440" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6" />
+      <stop offset="1" stop-color="#38bdf8" />
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0 H0 V48" fill="none" stroke="#17304f" stroke-width="1" />
+    </pattern>
+    <radialGradient id="glow" cx="0.18" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#2563eb" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+
+  <text x="80" y="148" font-family="monospace" font-size="26" fill="#38bdf8">~/kristyan/profile</text>
+  <text x="76" y="268" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="92" font-weight="700" fill="#e6edf6">Kristyan Carvalho</text>
+  <text x="80" y="336" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44" font-weight="600" fill="#3b82f6">Full-Stack Developer</text>
+  <text x="80" y="398" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="29" fill="#9fb0c6">Web · APIs · CLI · Linux · Automation · Open Source</text>
+
+  <g font-family="monospace" font-size="24" fill="#cdd9ec">
+    <rect x="80" y="468" width="96" height="48" rx="24" fill="#13294d" stroke="#2a4a78" />
+    <text x="103" y="500">Go</text>
+    <rect x="190" y="468" width="184" height="48" rx="24" fill="#13294d" stroke="#2a4a78" />
+    <text x="212" y="500">TypeScript</text>
+    <rect x="388" y="468" width="124" height="48" rx="24" fill="#13294d" stroke="#2a4a78" />
+    <text x="412" y="500">React</text>
+    <rect x="526" y="468" width="132" height="48" rx="24" fill="#13294d" stroke="#2a4a78" />
+    <text x="550" y="500">Docker</text>
+  </g>
+
+  <text x="80" y="574" font-family="monospace" font-size="26" fill="#7587a0">kristyan.dev</text>
+  <rect x="0" y="624" width="1200" height="6" fill="url(#accent)" />
+</svg>

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Kristyan Carvalho — Desenvolvedor Full-Stack",
+    "description": "Portfólio de Kristyan Carvalho, desenvolvedor full-stack focado em aplicações web, APIs, ferramentas de terminal, Linux, automação e open source."
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "posts": "Posts",
+    "contact": "Contato",
+    "menu": "Abrir menu",
+    "close": "Fechar menu",
+    "primary": "Navegação principal",
+    "footer": "Navegação do rodapé"
+  },
+  "a11y": {
+    "skip": "Pular para o conteúdo"
+  },
+  "language": {
+    "label": "Selecionar idioma",
+    "pt-BR": "Português",
+    "en": "Inglês"
+  },
+  "theme": {
+    "label": "Alternar tema",
+    "light": "Tema claro",
+    "dark": "Tema escuro",
+    "system": "Tema do sistema"
+  },
+  "hero": {
+    "title": "Desenvolvedor Full-Stack",
+    "intro": "Construo aplicações web, APIs, ferramentas de terminal e automações com foco em performance, arquitetura limpa e boas interfaces.",
+    "downloadResume": "Baixar currículo",
+    "viewProjects": "Ver projetos",
+    "availability": "Disponível para novos projetos"
+  },
+  "about": {
+    "eyebrow": "Perfil",
+    "title": "Sobre",
+    "bio": "Sou desenvolvedor full-stack com foco em aplicações modernas, performáticas e bem estruturadas. Construo APIs, interfaces web, ferramentas de terminal, automações e projetos open source. Gosto de transformar ideias em sistemas utilizáveis, com atenção a arquitetura, experiência do usuário, documentação e manutenção a longo prazo.",
+    "work": "Trabalho com foco em código claro e bem tipado, decisões pragmáticas e atenção a documentação, testes e manutenção a longo prazo.",
+    "stackTitle": "Stack principal",
+    "interestsTitle": "Interesses técnicos",
+    "interests": [
+      "APIs e desenvolvimento backend",
+      "Ferramentas de terminal (CLI e TUI)",
+      "Automação e developer experience",
+      "Open source",
+      "Performance e arquitetura limpa",
+      "Documentação técnica"
+    ]
+  },
+  "projects": {
+    "eyebrow": "Trabalho",
+    "title": "Projetos",
+    "subtitle": "Uma seleção de projetos open source e ferramentas que construí.",
+    "featured": "Destaque",
+    "code": "Código",
+    "demo": "Demo",
+    "githubProfile": "Ver perfil no GitHub"
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Vamos conversar",
+    "subtitle": "Tem um projeto, ideia ou oportunidade? Envie uma mensagem.",
+    "socialLabel": "Ou me encontre em",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada. Obrigado pelo contato!",
+      "error": "Não foi possível enviar a mensagem. Tente novamente.",
+      "notConfigured": "O envio ainda não está configurado. Tente pelas redes acima."
+    },
+    "validation": {
+      "nameRequired": "Informe seu nome.",
+      "emailRequired": "Informe seu e-mail.",
+      "emailInvalid": "Informe um e-mail válido.",
+      "subjectRequired": "Informe o assunto.",
+      "messageRequired": "Escreva uma mensagem."
+    }
+  },
+  "footer": {
+    "tagline": "Desenvolvedor full-stack construindo software prático e bem estruturado.",
+    "rights": "Todos os direitos reservados.",
+    "builtWith": "Construído com React, TypeScript e Tailwind CSS."
+  },
+  "posts": {
+    "eyebrow": "Blog",
+    "title": "Últimos posts",
+    "subtitle": "Notas e artigos sobre código, Linux e tecnologia.",
+    "viewMore": "Ver mais",
+    "read": "Ler post",
+    "loading": "Carregando posts...",
+    "empty": "Nenhum post encontrado.",
+    "error": "Não foi possível carregar os posts.",
+    "retry": "Tentar novamente"
+  }
+}
