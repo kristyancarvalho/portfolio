@@ -1,4 +1,5 @@
 import { ArrowDown, Download } from 'lucide-react'
+import { motion, useReducedMotion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { HeroArtifact } from '@/widgets/hero/HeroArtifact'
 import { Container } from '@/shared/ui/Container'
@@ -9,13 +10,19 @@ import { cn } from '@/shared/lib/cn'
 
 export function HeroSection() {
   const { t, i18n } = useTranslation()
+  const reduceMotion = useReducedMotion()
   const language = i18n.language === 'en' ? 'en' : 'pt-BR'
   const resumeHref = siteConfig.resume[language]
 
   return (
     <section id="home" className="relative flex min-h-screen items-center pb-20 pt-28">
       <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="flex flex-col items-start gap-6">
+        <motion.div
+          className="flex flex-col items-start gap-6"
+          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-success" />
             {t('hero.availability')}
@@ -49,11 +56,16 @@ export function HeroSection() {
           </div>
 
           <SocialLinks className="pt-1" />
-        </div>
+        </motion.div>
 
-        <div className="relative flex justify-center lg:justify-end">
+        <motion.div
+          className="relative flex justify-center lg:justify-end"
+          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+        >
           <HeroArtifact className="max-w-md" />
-        </div>
+        </motion.div>
       </Container>
     </section>
   )
