@@ -9,10 +9,12 @@ import { navItems } from '@/shared/config/navigation'
 import { siteConfig } from '@/shared/config/site'
 import { cn } from '@/shared/lib/cn'
 import { useActiveSection } from '@/widgets/header/useActiveSection'
+import { useScrolled } from '@/widgets/header/useScrolled'
 
 export function Header() {
   const { t } = useTranslation()
   const active = useActiveSection()
+  const scrolled = useScrolled()
   const [menuOpen, setMenuOpen] = useState(false)
 
   const closeMenu = () => setMenuOpen(false)
@@ -20,7 +22,14 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 pt-3 sm:pt-4">
       <Container>
-        <div className="flex items-center justify-between gap-4 rounded-full border border-border bg-surface/80 px-4 py-2 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-surface/70 sm:px-5">
+        <div
+          className={cn(
+            'flex items-center justify-between gap-4 rounded-full border px-4 py-2 backdrop-blur transition-[background-color,box-shadow,border-color] duration-300 sm:px-5',
+            scrolled
+              ? 'border-border bg-surface/85 shadow-md supports-[backdrop-filter]:bg-surface/75'
+              : 'border-border/70 bg-surface/60 shadow-sm supports-[backdrop-filter]:bg-surface/50',
+          )}
+        >
           <a
             href="#home"
             className="rounded-full px-1 text-sm font-semibold tracking-tight text-text transition-colors hover:text-primary"
