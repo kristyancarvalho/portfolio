@@ -1,5 +1,6 @@
-import { m, useReducedMotion } from 'motion/react'
+import { m } from 'motion/react'
 import type { ReactNode } from 'react'
+import { revealVariants, viewportOnce } from '@/shared/lib/motion'
 
 export type RevealProps = {
   children: ReactNode
@@ -9,16 +10,16 @@ export type RevealProps = {
 }
 
 export function Reveal({ children, className, delay = 0, as = 'div' }: RevealProps) {
-  const reduceMotion = useReducedMotion()
   const Component = as === 'li' ? m.li : m.div
 
   return (
     <Component
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+      variants={revealVariants}
+      custom={delay}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
     >
       {children}
     </Component>
