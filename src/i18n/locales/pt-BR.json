@@ -51,5 +51,18 @@
     "code": "Código",
     "demo": "Demo",
     "githubProfile": "Ver perfil no GitHub"
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Vamos conversar",
+    "subtitle": "Tem um projeto, ideia ou oportunidade? Envie uma mensagem.",
+    "socialLabel": "Ou me encontre em",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar mensagem"
+    }
   }
 }
