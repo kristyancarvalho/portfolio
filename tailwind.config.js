@@ -46,7 +46,7 @@ export default {
           'Liberation Mono',
           'monospace',
         ],
-        signature: ['Caveat', 'ui-sans-serif', 'cursive'],
+        signature: ['Herr Von Muellerhoff', 'ui-sans-serif', 'cursive'],
       },
       boxShadow: {
         sm: 'var(--shadow-sm)',
