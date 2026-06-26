@@ -1,0 +1,13 @@
+name: Feature Suggestion
+description: Sugest a feature or improvement
+title: "[TO IMPLEMENT] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What kind of feature do you want?
+      placeholder: Something that would be great to have
+    validations:
+      required: true
