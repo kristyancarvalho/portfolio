@@ -4,6 +4,7 @@ import { Badge } from '@/shared/ui/Badge'
 import { Card } from '@/shared/ui/Card'
 import { Reveal } from '@/shared/ui/Reveal'
 import { Section } from '@/shared/ui/Section'
+import { SectionHeading } from '@/shared/ui/SectionHeading'
 
 const stack = [
   'TypeScript',
@@ -24,10 +25,7 @@ export function AboutSection() {
 
   return (
     <Section id="about" className="bg-background-soft">
-      <Reveal>
-        <p className="type-badge text-primary">{t('about.eyebrow')}</p>
-        <h2 className="type-heading mt-2">{t('about.title')}</h2>
-      </Reveal>
+      <SectionHeading eyebrow={t('about.eyebrow')} title={t('about.title')} />
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <Reveal className="space-y-5">

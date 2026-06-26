@@ -6,7 +6,8 @@ import { fetchLatestPosts } from '@/entities/post/postService'
 import type { BlogPost } from '@/entities/post/model'
 import { Button } from '@/shared/ui/Button'
 import { Container } from '@/shared/ui/Container'
-import { Reveal } from '@/shared/ui/Reveal'
+import { SectionHeading } from '@/shared/ui/SectionHeading'
+import { Stagger, StaggerItem } from '@/shared/ui/Stagger'
 import { buttonVariants } from '@/shared/ui/buttonVariants'
 import { siteConfig } from '@/shared/config/site'
 
@@ -47,11 +48,11 @@ export function PostsSection() {
       className="relative scroll-mt-24 overflow-hidden bg-background-soft py-20 sm:py-28"
     >
       <Container>
-        <Reveal>
-          <p className="type-badge text-primary">{t('posts.eyebrow')}</p>
-          <h2 className="type-heading mt-2">{t('posts.title')}</h2>
-          <p className="type-body-muted mt-3 max-w-2xl">{t('posts.subtitle')}</p>
-        </Reveal>
+        <SectionHeading
+          eyebrow={t('posts.eyebrow')}
+          title={t('posts.title')}
+          subtitle={t('posts.subtitle')}
+        />
 
         {status === 'loading' ? (
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-hidden="true">
@@ -93,13 +94,13 @@ export function PostsSection() {
         ) : null}
 
         {status === 'success' && posts.length > 0 ? (
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post, index) => (
-              <Reveal key={post.url} as="li" delay={Math.min(index * 0.08, 0.24)} className="h-full">
+          <Stagger as="ul" className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+              <StaggerItem key={post.url} as="li" className="h-full">
                 <PostCard post={post} />
-              </Reveal>
+              </StaggerItem>
             ))}
-          </ul>
+          </Stagger>
         ) : null}
 
         <div className="relative z-10 mt-12 flex justify-center">
