@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f8fc" />
     <title>Kristyan Carvalho</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('portfolio-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var resolved =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : prefersDark
+                ? 'dark'
+                : 'light';
+          var root = document.documentElement;
+          if (resolved === 'dark') {
+            root.classList.add('dark');
+          }
+          root.style.colorScheme = resolved;
+        } catch (error) {
+          void error;
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
