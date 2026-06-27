@@ -1,0 +1,16 @@
+[
+  {
+    "id": "v2",
+    "label": "v2",
+    "current": true,
+    "href": null,
+    "external": false
+  },
+  {
+    "id": "v1",
+    "label": "v1",
+    "current": false,
+    "href": "https://v1.kristyan.dev/",
+    "external": true
+  }
+]
