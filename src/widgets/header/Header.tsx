@@ -4,6 +4,7 @@ import { Github, Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '@/features/language-switcher/LanguageSwitcher'
 import { ThemeToggle } from '@/features/theme-toggle/ThemeToggle'
+import { VersionSelector } from '@/features/version-selector/VersionSelector'
 import { Container } from '@/shared/ui/Container'
 import { IconLink } from '@/shared/ui/IconLink'
 import { ScrollProgress } from '@/shared/ui/ScrollProgress'
@@ -104,6 +105,7 @@ export function Header() {
             </IconLink>
             <ThemeToggle className="h-9 w-9" />
             <LanguageSwitcher className="hidden sm:inline-flex" />
+            <VersionSelector className="hidden md:inline-flex" />
             <m.button
               type="button"
               aria-label={menuOpen ? t('nav.close') : t('nav.menu')}
@@ -176,9 +178,12 @@ export function Header() {
               })}
               <m.div
                 variants={menuItemVariants}
-                className="mt-2 flex items-center justify-between border-t border-border px-2 pt-3"
+                className="mt-2 flex flex-wrap items-center justify-between gap-2 border-t border-border px-2 pt-3"
               >
-                <LanguageSwitcher />
+                <div className="flex items-center gap-2">
+                  <LanguageSwitcher />
+                  <VersionSelector />
+                </div>
                 <IconLink href={siteConfig.social.github} label="GitHub" className="h-9 w-9">
                   <Github className="h-[1.05rem] w-[1.05rem]" aria-hidden="true" />
                 </IconLink>

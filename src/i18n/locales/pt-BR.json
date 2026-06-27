@@ -28,6 +28,11 @@
     "dark": "Tema escuro",
     "system": "Tema do sistema"
   },
+  "version": {
+    "label": "Selecionar versão do portfólio",
+    "current": "Versão atual",
+    "previous": "Abrir versão anterior"
+  },
   "hero": {
     "title": "Desenvolvedor Full-Stack",
     "intro": "Construo <hi>aplicações web</hi>, <hi>APIs</hi>, ferramentas de terminal e automações com foco em <hi>performance</hi>, arquitetura limpa e boas interfaces.",
