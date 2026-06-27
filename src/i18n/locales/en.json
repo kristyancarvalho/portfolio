@@ -28,6 +28,11 @@
     "dark": "Dark theme",
     "system": "System theme"
   },
+  "version": {
+    "label": "Select portfolio version",
+    "current": "Current version",
+    "previous": "Open previous version"
+  },
   "hero": {
     "title": "Full-Stack Developer",
     "intro": "I build <hi>web applications</hi>, <hi>APIs</hi>, terminal tools and automations with a focus on <hi>performance</hi>, clean architecture and good interfaces.",
