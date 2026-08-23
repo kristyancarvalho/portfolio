@@ -37,14 +37,6 @@ export function HeroSection() {
 
       <Container>
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-7 text-center">
-          <m.span
-            {...fadeUp(0.05)}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3 py-1 text-xs font-medium text-text-muted backdrop-blur-sm"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-success" />
-            {t('hero.availability')}
-          </m.span>
-
           <div className="flex flex-col items-center gap-5">
             <HeroName name="Kristyan Carvalho" />
             <m.div
