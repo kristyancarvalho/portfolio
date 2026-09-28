@@ -1,6 +1,7 @@
 import type { Language } from '@/i18n'
 
 export type LocalizedText = Record<Language, string>
+export type LocalizedList = Record<Language, string[]>
 
 export type ProjectLinks = {
   github?: string
@@ -16,5 +17,6 @@ export type Project = {
   stack: string[]
   title: LocalizedText
   description: LocalizedText
+  technicalAspects?: LocalizedList
   links: ProjectLinks
 }
