@@ -97,6 +97,62 @@
     opacity: 1;
     transform: translateX(280%) rotate(7deg);
   }
+
+  .hero-dot-field {
+    --dot-x: 50%;
+    --dot-y: 50%;
+    @apply pointer-events-none absolute inset-0 -z-10 overflow-hidden;
+  }
+
+  .hero-dot-field-base,
+  .hero-dot-field-response,
+  .hero-dot-field-glow {
+    @apply absolute inset-0;
+  }
+
+  .hero-dot-field-base,
+  .hero-dot-field-response {
+    background-image: radial-gradient(
+      circle,
+      rgb(var(--color-primary) / 0.18) 1px,
+      transparent 1.4px
+    );
+    background-size: 28px 28px;
+  }
+
+  .hero-dot-field-base {
+    mask-image: radial-gradient(ellipse 72% 62% at center, black, transparent 78%);
+  }
+
+  .hero-dot-field-glow {
+    background: radial-gradient(
+      circle 190px at var(--dot-x) var(--dot-y),
+      rgb(var(--color-primary) / 0.1),
+      transparent 72%
+    );
+    opacity: 0;
+    transition: opacity 280ms ease-out;
+  }
+
+  .hero-dot-field-response {
+    background-image: radial-gradient(
+      circle,
+      rgb(var(--color-accent) / 0.58) 1px,
+      transparent 1.5px
+    );
+    mask-image: radial-gradient(
+      circle 150px at var(--dot-x) var(--dot-y),
+      black,
+      transparent 78%
+    );
+    opacity: 0;
+    transition: opacity 280ms ease-out;
+  }
+
+  .hero-dot-field[data-active='true'] .hero-dot-field-glow,
+  .hero-dot-field[data-active='true'] .hero-dot-field-response {
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
