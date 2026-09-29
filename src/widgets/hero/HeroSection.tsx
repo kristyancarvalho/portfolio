@@ -41,7 +41,7 @@ export function HeroSection() {
             <HeroName name="Kristyan Carvalho" />
             <m.div
               {...fadeUp(0.45)}
-              className="flex items-center gap-2.5 text-primary sm:gap-3"
+              className="flex items-center gap-2.5 text-primary-strong sm:gap-3"
             >
               <span className="h-px w-7 rounded-full bg-gradient-to-r from-transparent to-primary sm:w-10" />
               <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.16em] sm:text-base sm:tracking-[0.22em]">

@@ -34,7 +34,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       whileHover={{ y: -2 }}
       whileTap={interactiveTap}
       className={cn(
-        'inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-border bg-surface text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary',
+        'inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-border bg-surface text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary-strong',
         className,
       )}
     >

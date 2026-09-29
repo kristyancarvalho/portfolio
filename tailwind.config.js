@@ -17,6 +17,8 @@ export default {
         primary: withAlpha('--color-primary'),
         'primary-soft': withAlpha('--color-primary-soft'),
         'primary-strong': withAlpha('--color-primary-strong'),
+        'on-primary': withAlpha('--color-on-primary'),
+        'on-primary-strong': withAlpha('--color-on-primary-strong'),
         accent: withAlpha('--color-accent'),
         'accent-soft': withAlpha('--color-accent-soft'),
         border: withAlpha('--color-border'),

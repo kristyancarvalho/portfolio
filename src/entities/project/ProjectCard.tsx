@@ -24,7 +24,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="relative z-10 flex h-full flex-col gap-4">
           <div className="flex items-start justify-between gap-3">
             <div className="flex flex-col gap-1">
-              <h3 className="text-lg font-semibold text-text transition-colors duration-200 group-hover:text-primary group-focus-within:text-primary">
+              <h3 className="text-lg font-semibold text-text transition-colors duration-200 group-hover:text-primary-strong group-focus-within:text-primary-strong">
                 {title}
               </h3>
               <p className="font-mono text-xs text-text-soft">
@@ -55,7 +55,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 href={project.links.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-text-muted transition-colors hover:text-primary focus-visible:text-primary"
+                className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-text-muted transition-colors hover:text-primary-strong focus-visible:text-primary-strong"
               >
                 <Github className="h-4 w-4" aria-hidden="true" />
                 {t('projects.code')}
@@ -70,7 +70,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 href={project.links.demo}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group/link inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary-strong focus-visible:text-primary-strong"
+                className="group/link inline-flex items-center gap-1 text-sm font-medium text-primary-strong transition-colors hover:text-text focus-visible:text-text"
               >
                 {t('projects.demo')}
                 <ArrowUpRight

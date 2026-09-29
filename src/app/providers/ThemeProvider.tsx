@@ -14,8 +14,8 @@ import {
 const STORAGE_KEY = 'portfolio-theme'
 
 const themeColor: Record<ResolvedTheme, string> = {
-  light: '#f6f8fc',
-  dark: '#0a1626',
+  light: '#fafbfc',
+  dark: '#080c10',
 }
 
 function getSystemTheme(): ResolvedTheme {

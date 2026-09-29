@@ -145,7 +145,7 @@ export function VersionSelector({ className }: { className?: string }) {
         onKeyDown={handleButtonKeyDown}
         whileHover={shouldReduceMotion ? undefined : { y: -2 }}
         whileTap={shouldReduceMotion ? undefined : interactiveTap}
-        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border bg-surface px-3 text-xs font-semibold text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary data-[state=open]:border-primary data-[state=open]:text-primary"
+        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border bg-surface px-3 text-xs font-semibold text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary-strong data-[state=open]:border-primary data-[state=open]:text-primary-strong"
       >
         <span>{currentPortfolioVersion.label}</span>
         <m.span

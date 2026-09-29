@@ -20,7 +20,7 @@ export function Footer() {
           <div className="max-w-sm space-y-4">
             <a
               href="#home"
-              className="text-base font-semibold text-text transition-colors hover:text-primary"
+              className="text-base font-semibold text-text transition-colors hover:text-primary-strong"
             >
               Kristyan Carvalho
             </a>
@@ -36,7 +36,7 @@ export function Footer() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="relative w-fit text-sm text-text-muted transition-colors hover:text-primary after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
+                className="relative w-fit text-sm text-text-muted transition-colors hover:text-primary-strong after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
               >
                 {t(item.labelKey)}
               </a>

@@ -55,7 +55,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             <span
               className={cn(
                 'relative z-10',
-                isActive ? 'text-white' : 'text-text-muted hover:text-text',
+                isActive ? 'text-on-primary' : 'text-text-muted hover:text-text',
               )}
             >
               {shortLabels[language]}

@@ -60,7 +60,7 @@ export function Header() {
         >
           <a
             href="#home"
-            className="rounded-full px-1 text-sm font-semibold tracking-tight text-text transition-colors hover:text-primary"
+            className="rounded-full px-1 text-sm font-semibold tracking-tight text-text transition-colors hover:text-primary-strong"
             onClick={closeMenu}
           >
             Kristyan Carvalho
@@ -79,7 +79,7 @@ export function Header() {
                   aria-current={isActive ? 'true' : undefined}
                   className={cn(
                     'relative rounded-full px-3 py-1.5 text-sm font-medium transition-colors',
-                    isActive ? 'text-primary' : 'text-text-muted hover:text-text',
+                    isActive ? 'text-primary-strong' : 'text-text-muted hover:text-text',
                   )}
                 >
                   {t(item.labelKey)}
@@ -113,7 +113,7 @@ export function Header() {
               aria-controls="mobile-navigation"
               onClick={() => setMenuOpen((open) => !open)}
               whileTap={interactiveTap}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-colors hover:border-primary hover:text-primary md:hidden"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface text-text-muted transition-colors hover:border-primary hover:text-primary-strong md:hidden"
             >
               <AnimatePresence mode="wait" initial={false}>
                 {menuOpen ? (

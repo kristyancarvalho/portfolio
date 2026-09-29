@@ -17,7 +17,7 @@ export function SectionHeading({
   return (
     <Stagger className={className}>
       <StaggerItem>
-        <p className="type-badge text-primary">{eyebrow}</p>
+        <p className="type-badge text-primary-strong">{eyebrow}</p>
       </StaggerItem>
       <StaggerItem>
         <h2 className="type-heading mt-2">{title}</h2>

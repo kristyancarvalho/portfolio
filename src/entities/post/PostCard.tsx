@@ -20,13 +20,13 @@ export function PostCard({ post }: { post: BlogPost }) {
       <time dateTime={post.publishedAt} className="type-caption">
         {formatDate(post.publishedAt, i18n.language)}
       </time>
-      <h3 className="line-clamp-2 text-lg font-semibold text-text transition-colors group-hover:text-primary">
+      <h3 className="line-clamp-2 text-lg font-semibold text-text transition-colors group-hover:text-primary-strong">
         {post.title}
       </h3>
       <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-text-muted">
         {post.description}
       </p>
-      <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+      <span className="inline-flex items-center gap-1 text-sm font-medium text-primary-strong">
         {t('posts.read')}
         <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
       </span>
