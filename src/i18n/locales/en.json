@@ -47,7 +47,8 @@
     "stackTitle": "Main stack",
     "stack": {
       "title": "Stack",
-      "subtitle": "Technologies I use to build applications, tools, automations and performant web experiences."
+      "subtitle": "Technologies I use to build applications, tools, automations and performant web experiences.",
+      "ariaLabel": "Featured technologies"
     },
     "interestsTitle": "Technical interests",
     "interests": [
