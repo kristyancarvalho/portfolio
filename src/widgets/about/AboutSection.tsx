@@ -48,7 +48,7 @@ export function AboutSection() {
                   className="flex items-start gap-2.5 text-sm text-text-muted"
                 >
                   <Check
-                    className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-accent-strong"
                     aria-hidden="true"
                   />
                   <span>{interest}</span>

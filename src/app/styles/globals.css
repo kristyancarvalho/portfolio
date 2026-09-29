@@ -102,6 +102,17 @@
     --dot-x: 50%;
     --dot-y: 50%;
     @apply pointer-events-none absolute inset-0 -z-10 overflow-hidden;
+    background:
+      radial-gradient(
+        ellipse 48% 44% at 50% 46%,
+        rgb(var(--color-primary) / 0.14),
+        transparent 74%
+      ),
+      radial-gradient(
+        circle 30% at 68% 42%,
+        rgb(var(--color-accent) / 0.08),
+        transparent 72%
+      );
   }
 
   .hero-dot-field-base,
@@ -152,6 +163,20 @@
   .hero-dot-field[data-active='true'] .hero-dot-field-glow,
   .hero-dot-field[data-active='true'] .hero-dot-field-response {
     opacity: 1;
+  }
+
+  .contact-section {
+    background:
+      radial-gradient(
+        circle 28rem at 8% 28%,
+        rgb(var(--color-primary) / 0.12),
+        transparent 70%
+      ),
+      radial-gradient(
+        circle 32rem at 92% 76%,
+        rgb(var(--color-accent) / 0.1),
+        transparent 72%
+      );
   }
 }
 

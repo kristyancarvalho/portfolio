@@ -13,6 +13,7 @@
   --color-on-primary: 5 25 38;
   --color-on-primary-strong: 255 255 255;
   --color-accent: 34 195 238;
+  --color-accent-strong: 0 112 145;
   --color-accent-soft: 220 247 253;
   --color-border: 227 232 236;
   --color-border-strong: 197 210 219;
@@ -41,6 +42,7 @@
   --color-on-primary: 5 25 38;
   --color-on-primary-strong: 5 25 38;
   --color-accent: 34 211 238;
+  --color-accent-strong: 34 211 238;
   --color-accent-soft: 9 51 61;
   --color-border: 34 48 58;
   --color-border-strong: 52 71 83;

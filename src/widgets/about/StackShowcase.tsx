@@ -5,14 +5,14 @@ import type { StackItem } from '@/entities/stack/model'
 import { StackIcon } from '@/entities/stack/StackIcon'
 
 const edgeMask =
-  'linear-gradient(to right, transparent, black 8%, black 92%, transparent)'
+  'linear-gradient(to right, transparent, black 2%, black 98%, transparent)'
 
 function Technology({ item }: { item: StackItem }) {
   return (
-    <span className="inline-flex items-center gap-2.5 whitespace-nowrap text-sm font-medium text-text-muted transition-colors duration-200 group-hover/item:text-text">
+    <span className="flex h-6 items-center gap-2.5 whitespace-nowrap text-sm font-medium leading-none text-text transition-colors duration-200 group-hover/item:text-primary-strong">
       <StackIcon
         slug={item.icon}
-        className="h-5 w-5 shrink-0 text-primary-strong"
+        className="block h-5 w-5 shrink-0 text-primary-strong"
       />
       {item.name}
     </span>
@@ -29,10 +29,10 @@ function TechnologyList({
   return (
     <ul
       aria-hidden={hidden || undefined}
-      className="flex shrink-0 items-center gap-8 pr-8"
+      className="flex h-full shrink-0 items-center gap-8 pr-8"
     >
       {items.map((item) => (
-        <li key={item.id} className="group/item">
+        <li key={item.id} className="group/item flex h-full items-center">
           <Technology item={item} />
         </li>
       ))}
@@ -68,10 +68,13 @@ export function StackShowcase() {
           role="region"
           aria-label={t('about.stack.ariaLabel')}
           tabIndex={0}
-          className="group/loop relative mt-6 overflow-hidden rounded-2xl border border-border bg-surface/70 py-5 shadow-sm transition-colors duration-200 hover:border-border-strong focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-background-soft"
+          className="group/loop relative mt-6 h-[4.5rem] overflow-hidden rounded-2xl border border-border-strong bg-surface/80 shadow-sm transition-colors duration-200 hover:border-primary focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-background-soft"
         >
-          <div style={{ maskImage: edgeMask, WebkitMaskImage: edgeMask }}>
-            <div className="flex w-max animate-logo-loop group-hover/loop:[animation-play-state:paused] group-focus/loop:[animation-play-state:paused]">
+          <div
+            className="h-full"
+            style={{ maskImage: edgeMask, WebkitMaskImage: edgeMask }}
+          >
+            <div className="flex h-full w-max animate-logo-loop group-hover/loop:[animation-play-state:paused] group-focus/loop:[animation-play-state:paused]">
               <TechnologyList items={featuredStack} />
               <TechnologyList items={featuredStack} hidden />
             </div>

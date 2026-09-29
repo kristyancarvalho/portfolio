@@ -20,6 +20,7 @@ export default {
         'on-primary': withAlpha('--color-on-primary'),
         'on-primary-strong': withAlpha('--color-on-primary-strong'),
         accent: withAlpha('--color-accent'),
+        'accent-strong': withAlpha('--color-accent-strong'),
         'accent-soft': withAlpha('--color-accent-soft'),
         border: withAlpha('--color-border'),
         'border-strong': withAlpha('--color-border-strong'),
