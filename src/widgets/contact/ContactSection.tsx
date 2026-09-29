@@ -30,7 +30,7 @@ export function ContactSection() {
   const { t } = useTranslation()
 
   return (
-    <Section id="contact">
+    <Section id="contact" className="contact-section">
       <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="space-y-8">
           <SectionHeading

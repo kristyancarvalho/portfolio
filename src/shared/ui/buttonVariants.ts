@@ -7,10 +7,11 @@ const baseClasses =
   'inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-60'
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: 'bg-primary text-white hover:bg-primary-strong',
+  primary:
+    'bg-primary text-on-primary hover:bg-primary-strong hover:text-on-primary-strong',
   secondary: 'bg-surface-strong text-text hover:bg-surface-soft',
   outline:
-    'border border-border-strong bg-transparent text-text hover:border-primary hover:text-primary',
+    'border border-border-strong bg-transparent text-text hover:border-primary hover:text-primary-strong',
   ghost: 'bg-transparent text-text-muted hover:bg-surface-soft hover:text-text',
 }
 

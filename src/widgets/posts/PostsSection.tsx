@@ -9,15 +9,9 @@ import { ButtonLink } from '@/shared/ui/ButtonLink'
 import { Container } from '@/shared/ui/Container'
 import { SectionHeading } from '@/shared/ui/SectionHeading'
 import { Stagger, StaggerItem } from '@/shared/ui/Stagger'
-import { DiagonalLines, DotField } from '@/widgets/decoration/Shapes'
 import { siteConfig } from '@/shared/config/site'
 
 type Status = 'loading' | 'error' | 'success'
-
-const overlayStyle = {
-  background:
-    'linear-gradient(to top, rgb(var(--color-background-soft)) 12%, transparent)',
-}
 
 export function PostsSection() {
   const { t } = useTranslation()
@@ -46,12 +40,8 @@ export function PostsSection() {
   return (
     <section
       id="posts"
-      className="relative isolate scroll-mt-24 overflow-hidden bg-background-soft py-20 sm:py-28"
+      className="scroll-mt-24 bg-background-soft py-20 sm:py-28"
     >
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <DiagonalLines className="right-0 top-0 h-48 w-1/2" />
-        <DotField className="bottom-24 right-[-2rem] h-40 w-40" />
-      </div>
       <Container>
         <SectionHeading
           eyebrow={t('posts.eyebrow')}
@@ -121,12 +111,6 @@ export function PostsSection() {
           </ButtonLink>
         </div>
       </Container>
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
-        style={overlayStyle}
-      />
     </section>
   )
 }

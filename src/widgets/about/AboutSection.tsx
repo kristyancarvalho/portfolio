@@ -17,10 +17,7 @@ function StackShowcaseFallback() {
     <div className="mt-14" aria-hidden="true">
       <div className="h-6 w-28 animate-pulse rounded-full bg-surface-soft" />
       <div className="mt-3 h-4 w-80 max-w-full animate-pulse rounded-full bg-surface-soft" />
-      <div className="mt-6 flex flex-col gap-3">
-        <div className="h-11 animate-pulse rounded-full bg-surface-soft" />
-        <div className="h-11 animate-pulse rounded-full bg-surface-soft" />
-      </div>
+      <div className="mt-6 h-16 animate-pulse rounded-2xl border border-border bg-surface" />
     </div>
   )
 }
@@ -51,7 +48,7 @@ export function AboutSection() {
                   className="flex items-start gap-2.5 text-sm text-text-muted"
                 >
                   <Check
-                    className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-accent-strong"
                     aria-hidden="true"
                   />
                   <span>{interest}</span>

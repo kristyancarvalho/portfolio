@@ -1,8 +1,8 @@
 import { ArrowDown } from 'lucide-react'
 import { m } from 'motion/react'
 import { Trans, useTranslation } from 'react-i18next'
+import { HeroDotField } from '@/widgets/hero/HeroDotField'
 import { HeroName } from '@/widgets/hero/HeroName'
-import { Blob, OrbitRing } from '@/widgets/decoration/Shapes'
 import { ResumeButton } from '@/features/resume-download/ResumeButton'
 import { Container } from '@/shared/ui/Container'
 import { SocialLinks } from '@/shared/ui/SocialLinks'
@@ -23,17 +23,7 @@ export function HeroSection() {
       id="home"
       className="relative isolate flex min-h-screen items-center overflow-hidden pb-20 pt-28"
     >
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <Blob className="left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2" />
-        <Blob
-          className="left-[16%] top-[22%] hidden h-64 w-64 sm:block"
-          tone="accent"
-        />
-        <OrbitRing
-          className="left-1/2 top-1/2 hidden h-[44rem] w-[44rem] -translate-x-1/2 -translate-y-1/2 opacity-60 lg:block"
-          duration={110}
-        />
-      </div>
+      <HeroDotField />
 
       <Container>
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-7 text-center">
@@ -41,7 +31,7 @@ export function HeroSection() {
             <HeroName name="Kristyan Carvalho" />
             <m.div
               {...fadeUp(0.45)}
-              className="flex items-center gap-2.5 text-primary sm:gap-3"
+              className="flex items-center gap-2.5 text-primary-strong sm:gap-3"
             >
               <span className="h-px w-7 rounded-full bg-gradient-to-r from-transparent to-primary sm:w-10" />
               <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.16em] sm:text-base sm:tracking-[0.22em]">

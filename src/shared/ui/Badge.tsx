@@ -6,7 +6,7 @@ export type BadgeTone = 'default' | 'primary' | 'accent'
 const toneClasses: Record<BadgeTone, string> = {
   default: 'border-border bg-surface-soft text-text-muted',
   primary: 'border-primary/30 bg-primary-soft text-primary-strong',
-  accent: 'border-accent/30 bg-accent-soft text-accent',
+  accent: 'border-accent/40 bg-accent-soft text-primary-strong',
 }
 
 export type BadgeProps = HTMLAttributes<HTMLSpanElement> & {

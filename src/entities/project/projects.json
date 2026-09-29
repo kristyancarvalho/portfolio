@@ -1,57 +1,81 @@
 [
   {
-    "id": "rendermd",
+    "id": "hyprism",
     "featured": true,
-    "platform": "CLI · TUI",
+    "platform": "Desktop Shell",
     "category": "Open Source",
-    "stack": ["Go", "Markdown", "Terminal UI", "Fuzzy Search"],
-    "title": {
-      "pt-BR": "rendermd",
-      "en": "rendermd"
-    },
+    "stack": ["QML", "Quickshell", "Hyprland", "Wayland", "Arch Linux"],
+    "title": { "pt-BR": "Hyprism", "en": "Hyprism" },
     "description": {
-      "pt-BR": "Renderizador de Markdown para terminal, leve, com saída colorida por sintaxe, hot reload e busca fuzzy para leitura rápida de arquivos locais.",
-      "en": "Lightweight terminal Markdown renderer with syntax-aware output, hot reload and fuzzy search for fast local reading."
+      "pt-BR": "Shell de desktop para Hyprland construído com QML e Quickshell, com configuração declarativa e temas semânticos derivados do wallpaper.",
+      "en": "A Hyprland desktop shell built with QML and Quickshell, with declarative configuration, Wayland integration and wallpaper-driven semantic themes."
     },
-    "links": {
-      "github": "https://github.com/kristyancarvalho/rendermd"
-    }
+    "links": { "github": "https://github.com/kristyancarvalho/hyprism" }
+  },
+  {
+    "id": "argo",
+    "featured": true,
+    "platform": "CLI · TUI · Daemon",
+    "category": "Open Source",
+    "stack": ["Go", "Linux", "SQLite", "NetworkManager", "nftables"],
+    "title": { "pt-BR": "Argo", "en": "Argo" },
+    "description": {
+      "pt-BR": "Gerenciador de downloads para Linux com daemon persistente, retomada, estado em SQLite, prioridades e políticas opcionais de tráfego adaptativo.",
+      "en": "A Linux download manager with a persistent daemon, resumable transfers, SQLite state, scheduling priorities and optional adaptive traffic policies."
+    },
+    "links": { "github": "https://github.com/kristyancarvalho/argo" }
+  },
+  {
+    "id": "desktube",
+    "featured": true,
+    "platform": "Desktop · Mobile",
+    "category": "Open Source",
+    "stack": ["TypeScript", "Electron", "React Native", "Expo", "WebSocket"],
+    "title": { "pt-BR": "DeskTube", "en": "DeskTube" },
+    "description": {
+      "pt-BR": "Cliente Electron controlado por um app Android pela rede local, com pareamento seguro e estado compartilhado de reprodução e fila.",
+      "en": "An Electron client controlled by an Android app over the local network, with secure pairing and shared playback and queue state."
+    },
+    "links": { "github": "https://github.com/kristyancarvalho/desktube" }
+  },
+  {
+    "id": "feedforge",
+    "featured": true,
+    "platform": "Web App · API",
+    "category": "Open Source",
+    "stack": ["React", "TypeScript", "Fastify", "Prisma", "PostgreSQL"],
+    "title": { "pt-BR": "FeedForge", "en": "FeedForge" },
+    "description": {
+      "pt-BR": "Radar editorial em React e Fastify que ingere RSS/Atom e HTML configurado, deduplica notícias e aplica pontuação determinística e explicável.",
+      "en": "A React and Fastify editorial radar that ingests RSS/Atom and configured HTML, deduplicates news and applies deterministic, explainable scoring."
+    },
+    "links": { "github": "https://github.com/kristyancarvalho/feedforge" }
+  },
+  {
+    "id": "brmgen",
+    "featured": false,
+    "platform": "CLI",
+    "category": "Open Source",
+    "stack": ["Java", "Gradle", "YAML", "JSON", "brModelo"],
+    "title": { "pt-BR": "brmgen", "en": "brmgen" },
+    "description": {
+      "pt-BR": "CLI em Java que converte modelos conceituais e lógicos em YAML ou JSON para arquivos .brM3 editáveis e interoperáveis com o brModelo.",
+      "en": "A Java CLI that turns YAML or JSON conceptual and logical models into editable .brM3 files interoperable with brModelo."
+    },
+    "links": { "github": "https://github.com/kristyancarvalho/brmgen" }
   },
   {
     "id": "aurview",
-    "featured": true,
+    "featured": false,
     "platform": "CLI · TUI",
     "category": "Open Source",
-    "stack": ["Go", "Arch Linux", "AUR", "Terminal UI"],
-    "title": {
-      "pt-BR": "aurview",
-      "en": "aurview"
-    },
+    "stack": ["Go", "Arch Linux", "AUR", "Bubble Tea"],
+    "title": { "pt-BR": "aurview", "en": "aurview" },
     "description": {
-      "pt-BR": "Navegador de pacotes no terminal para usuários de Arch Linux e AUR: pesquise metadados, compare resultados, inspecione detalhes e copie nomes de pacotes sem sair do terminal.",
-      "en": "Terminal package browser for Arch Linux and AUR users: search metadata, compare results, inspect details and copy package names without leaving the terminal."
+      "pt-BR": "TUI somente leitura para pesquisar e filtrar metadados do AUR e repositórios do pacman, inspecionar resultados e copiar nomes de pacotes.",
+      "en": "A read-only TUI for searching and filtering AUR and pacman repository metadata, inspecting results and copying package names."
     },
-    "links": {
-      "github": "https://github.com/kristyancarvalho/aurview"
-    }
-  },
-  {
-    "id": "tux-letter",
-    "featured": true,
-    "platform": "CLI · Service",
-    "category": "Open Source",
-    "stack": ["Go", "Linux", "RSS", "AI", "Email"],
-    "title": {
-      "pt-BR": "tux-letter",
-      "en": "tux-letter"
-    },
-    "description": {
-      "pt-BR": "Serviço de newsletter em binário único para notícias de Linux e open source. Coleta artigos dos sites listados, lê as fontes e sintetiza uma única newsletter escrita por IA, entregue por e-mail.",
-      "en": "Single-binary newsletter service for Linux and open-source news. It collects articles from listed sites, reads the sources and synthesizes a single AI-written newsletter delivered by email."
-    },
-    "links": {
-      "github": "https://github.com/kristyancarvalho/tux-letter"
-    }
+    "links": { "github": "https://github.com/kristyancarvalho/aurview" }
   },
   {
     "id": "msvg",
@@ -59,52 +83,63 @@
     "platform": "CLI · Library",
     "category": "Open Source",
     "stack": ["TypeScript", "SVG", "YAML", "Markdown"],
-    "title": {
-      "pt-BR": "MSVG",
-      "en": "MSVG"
-    },
+    "title": { "pt-BR": "MSVG", "en": "MSVG" },
     "description": {
-      "pt-BR": "Gera diagramas SVG limpos e acessíveis a partir de sintaxe YAML embutida em Markdown, mantendo os diagramas próximos da documentação e da escrita técnica.",
-      "en": "Generates clean, accessible SVG diagrams from YAML syntax embedded in Markdown, keeping diagrams close to documentation and technical writing."
+      "pt-BR": "Ferramentas TypeScript que convertem YAML em Markdown em diagramas SVG estáticos, determinísticos e acessíveis para documentação técnica.",
+      "en": "TypeScript tools that turn YAML in Markdown into static, deterministic and accessible SVG diagrams for technical documentation."
     },
-    "links": {
-      "github": "https://github.com/kristyancarvalho/msvg"
-    }
+    "links": { "github": "https://github.com/kristyancarvalho/msvg" }
+  },
+  {
+    "id": "rendermd",
+    "featured": false,
+    "platform": "CLI · TUI",
+    "category": "Open Source",
+    "stack": ["Go", "Markdown", "Terminal UI", "Syntax Highlighting"],
+    "title": { "pt-BR": "rendermd", "en": "rendermd" },
+    "description": {
+      "pt-BR": "Leitor de Markdown para terminal em Go, com renderização por sintaxe, hot reload, busca navegável, temas e entrada por arquivo ou stdin.",
+      "en": "A Go terminal Markdown reader with syntax-aware rendering, hot reload, navigable search, themes and file or stdin input."
+    },
+    "links": { "github": "https://github.com/kristyancarvalho/rendermd" }
+  },
+  {
+    "id": "tux-letter",
+    "featured": false,
+    "platform": "CLI · Service",
+    "category": "Open Source",
+    "stack": ["Go", "Linux", "RSS", "AI", "Email"],
+    "title": { "pt-BR": "tux-letter", "en": "tux-letter" },
+    "description": {
+      "pt-BR": "Serviço Go em binário único que descobre feeds, extrai artigos sobre Linux e open source e envia um boletim editorial referenciado por e-mail.",
+      "en": "A single-binary Go service that discovers feeds, extracts Linux and open-source articles, and emails a referenced editorial digest."
+    },
+    "links": { "github": "https://github.com/kristyancarvalho/tux-letter" }
   },
   {
     "id": "gitpulse",
     "featured": false,
     "platform": "Service",
     "category": "Open Source",
-    "stack": ["Go", "GitHub API", "SVG"],
-    "title": {
-      "pt-BR": "GitPulse",
-      "en": "GitPulse"
-    },
+    "stack": ["Go", "GitHub API", "SVG", "Vercel"],
+    "title": { "pt-BR": "GitPulse", "en": "GitPulse" },
     "description": {
-      "pt-BR": "Renderiza sua contribuição mais recente no GitHub como uma imagem dinâmica com o nome do repositório e a linguagem principal, pronta para badges de README.",
-      "en": "Renders your latest GitHub contribution as a dynamic image showing the repository name and main language, ready for README badges."
+      "pt-BR": "Web service em Go que consulta a contribuição pública mais recente de um usuário no GitHub e a renderiza como uma imagem SVG configurável para READMEs.",
+      "en": "A Go web service that fetches a user's latest public GitHub contribution and renders it as a configurable SVG image for READMEs."
     },
-    "links": {
-      "github": "https://github.com/kristyancarvalho/gitpulse"
-    }
+    "links": { "github": "https://github.com/kristyancarvalho/gitpulse" }
   },
   {
     "id": "openpilot-nvim",
     "featured": false,
-    "platform": "Neovim",
+    "platform": "Neovim · Daemon",
     "category": "Open Source",
-    "stack": ["Lua", "Neovim"],
-    "title": {
-      "pt-BR": "openpilot.nvim",
-      "en": "openpilot.nvim"
-    },
+    "stack": ["Lua", "Neovim", "Go", "OpenRouter"],
+    "title": { "pt-BR": "openpilot.nvim", "en": "openpilot.nvim" },
     "description": {
-      "pt-BR": "Plugin para Neovim focado em trazer programação assistida por IA e automação para o fluxo do editor.",
-      "en": "Neovim plugin focused on bringing AI-assisted coding and automation into the editor workflow."
+      "pt-BR": "Cliente para Neovim em Lua com daemon local em Go que envia contexto de edição ao OpenRouter e apresenta sugestões de código diretamente no editor.",
+      "en": "A Lua Neovim client with a local Go daemon that sends editing context to OpenRouter and presents code suggestions directly in the editor."
     },
-    "links": {
-      "github": "https://github.com/kristyancarvalho/openpilot.nvim"
-    }
+    "links": { "github": "https://github.com/kristyancarvalho/openpilot.nvim" }
   }
 ]

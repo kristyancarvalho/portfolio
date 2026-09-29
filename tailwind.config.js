@@ -17,7 +17,10 @@ export default {
         primary: withAlpha('--color-primary'),
         'primary-soft': withAlpha('--color-primary-soft'),
         'primary-strong': withAlpha('--color-primary-strong'),
+        'on-primary': withAlpha('--color-on-primary'),
+        'on-primary-strong': withAlpha('--color-on-primary-strong'),
         accent: withAlpha('--color-accent'),
+        'accent-strong': withAlpha('--color-accent-strong'),
         'accent-soft': withAlpha('--color-accent-soft'),
         border: withAlpha('--color-border'),
         'border-strong': withAlpha('--color-border-strong'),
@@ -63,19 +66,14 @@ export default {
           from: { opacity: '0' },
           to: { opacity: '1' },
         },
-        marquee: {
+        'logo-loop': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-50%)' },
-        },
-        'marquee-reverse': {
-          from: { transform: 'translateX(-50%)' },
-          to: { transform: 'translateX(0)' },
         },
       },
       animation: {
         'fade-in': 'fade-in 0.4s ease-out both',
-        marquee: 'marquee 42s linear infinite',
-        'marquee-reverse': 'marquee-reverse 52s linear infinite',
+        'logo-loop': 'logo-loop 48s linear infinite',
       },
     },
   },
