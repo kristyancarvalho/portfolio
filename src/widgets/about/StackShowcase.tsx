@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { featuredStack } from '@/entities/stack/stack'
 import type { StackItem } from '@/entities/stack/model'
 import { StackIcon } from '@/entities/stack/StackIcon'
-import { Blob } from '@/widgets/decoration/Shapes'
 import { cn } from '@/shared/lib/cn'
 
 const edgeMask =
@@ -70,10 +69,7 @@ export function StackShowcase() {
   const rowTwo = featuredStack.slice(half)
 
   return (
-    <div className="relative isolate mt-14">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <Blob className="right-[12%] top-[-3rem] h-56 w-56" tone="accent" />
-      </div>
+    <div className="mt-14">
       <h3 className="text-lg font-semibold text-text">{t('about.stack.title')}</h3>
       <p className="type-body-muted mt-2 max-w-2xl">{t('about.stack.subtitle')}</p>
 

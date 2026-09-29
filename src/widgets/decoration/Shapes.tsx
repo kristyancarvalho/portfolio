@@ -60,34 +60,3 @@ export function OrbitRing({
     </m.div>
   )
 }
-
-export function DotField({ className }: ShapeProps) {
-  return (
-    <div
-      aria-hidden="true"
-      className={cn('pointer-events-none absolute', className)}
-      style={{
-        backgroundImage:
-          'radial-gradient(rgb(var(--color-primary) / 0.22) 1px, transparent 1.6px)',
-        backgroundSize: '18px 18px',
-        maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 75%)',
-        WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 75%)',
-      }}
-    />
-  )
-}
-
-export function DiagonalLines({ className }: ShapeProps) {
-  return (
-    <div
-      aria-hidden="true"
-      className={cn('pointer-events-none absolute', className)}
-      style={{
-        backgroundImage:
-          'repeating-linear-gradient(135deg, rgb(var(--color-primary) / 0.1) 0, rgb(var(--color-primary) / 0.1) 1px, transparent 1px, transparent 12px)',
-        maskImage: 'linear-gradient(to bottom, black, transparent)',
-        WebkitMaskImage: 'linear-gradient(to bottom, black, transparent)',
-      }}
-    />
-  )
-}
