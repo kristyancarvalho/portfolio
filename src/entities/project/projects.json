@@ -7,12 +7,8 @@
     "stack": ["QML", "Quickshell", "Hyprland", "Wayland", "Arch Linux"],
     "title": { "pt-BR": "Hyprism", "en": "Hyprism" },
     "description": {
-      "pt-BR": "Ambiente de desktop coeso para Hyprland construído com QML e Quickshell, com configuração declarativa, integração Wayland e temas semânticos derivados do wallpaper.",
-      "en": "A cohesive Hyprland desktop built with QML and Quickshell, featuring declarative configuration, Wayland integration and wallpaper-driven semantic themes."
-    },
-    "technicalAspects": {
-      "pt-BR": ["Shell de desktop com Quickshell", "Temas semânticos dinâmicos", "Configuração declarativa", "Pacotes estável e Git no AUR"],
-      "en": ["Quickshell desktop shell", "Dynamic semantic themes", "Declarative configuration", "Stable and Git AUR packages"]
+      "pt-BR": "Shell de desktop para Hyprland construído com QML e Quickshell, com configuração declarativa e temas semânticos derivados do wallpaper.",
+      "en": "A Hyprland desktop shell built with QML and Quickshell, with declarative configuration, Wayland integration and wallpaper-driven semantic themes."
     },
     "links": { "github": "https://github.com/kristyancarvalho/hyprism" }
   },
@@ -24,12 +20,8 @@
     "stack": ["Go", "Linux", "SQLite", "NetworkManager", "nftables"],
     "title": { "pt-BR": "Argo", "en": "Argo" },
     "description": {
-      "pt-BR": "Gerenciador de downloads para Linux cujo daemon persistente mantém transferências HTTP(S), retomada e estado em SQLite, com prioridades e políticas opcionais de tráfego adaptativo.",
-      "en": "A Linux download manager whose persistent daemon maintains HTTP(S) transfers, recovery and SQLite state, with priorities and optional adaptive traffic policies."
-    },
-    "technicalAspects": {
-      "pt-BR": ["Daemon persistente sem privilégios", "IPC protegido por socket Unix", "Downloads concorrentes e retomáveis", "QoS adaptativo opcional no Linux"],
-      "en": ["Persistent unprivileged daemon", "Protected Unix socket IPC", "Concurrent resumable downloads", "Optional adaptive Linux QoS"]
+      "pt-BR": "Gerenciador de downloads para Linux com daemon persistente, retomada, estado em SQLite, prioridades e políticas opcionais de tráfego adaptativo.",
+      "en": "A Linux download manager with a persistent daemon, resumable transfers, SQLite state, scheduling priorities and optional adaptive traffic policies."
     },
     "links": { "github": "https://github.com/kristyancarvalho/argo" }
   },
@@ -41,12 +33,8 @@
     "stack": ["TypeScript", "Electron", "React Native", "Expo", "WebSocket"],
     "title": { "pt-BR": "DeskTube", "en": "DeskTube" },
     "description": {
-      "pt-BR": "Cliente desktop em Electron com controle remoto Android que compartilha reprodução e fila pela rede local, usando pareamento por tokens e um protocolo WebSocket tipado.",
-      "en": "An Electron desktop client with an Android remote that shares playback and queue state over the local network using token-based pairing and a typed WebSocket protocol."
-    },
-    "technicalAspects": {
-      "pt-BR": ["Desktop Electron e controle Android", "Comunicação direta na rede local", "Pareamento seguro com tokens expirantes", "Estado compartilhado de fila e controles"],
-      "en": ["Electron desktop and Android remote", "Direct local-network communication", "Secure expiring-token pairing", "Shared queue and control state"]
+      "pt-BR": "Cliente Electron controlado por um app Android pela rede local, com pareamento seguro e estado compartilhado de reprodução e fila.",
+      "en": "An Electron client controlled by an Android app over the local network, with secure pairing and shared playback and queue state."
     },
     "links": { "github": "https://github.com/kristyancarvalho/desktube" }
   },
@@ -55,15 +43,11 @@
     "featured": true,
     "platform": "Web App · API",
     "category": "Open Source",
-    "stack": ["React", "TypeScript", "Fastify", "Prisma", "PostgreSQL", "Docker"],
+    "stack": ["React", "TypeScript", "Fastify", "Prisma", "PostgreSQL"],
     "title": { "pt-BR": "FeedForge", "en": "FeedForge" },
     "description": {
-      "pt-BR": "Radar editorial local-first em React e Fastify que ingere RSS/Atom — e HTML explicitamente configurado —, deduplica notícias e as classifica com pontuação determinística e explicável.",
-      "en": "A local-first React and Fastify editorial radar that ingests RSS/Atom—and explicitly configured HTML—deduplicates news and ranks it with deterministic, explainable scoring."
-    },
-    "technicalAspects": {
-      "pt-BR": ["Ingestão primária por RSS/Atom", "Fontes HTML configuradas explicitamente", "Classificação determinística e explicável", "Crawler agendado e API REST"],
-      "en": ["RSS/Atom-first ingestion", "Explicitly configured HTML sources", "Deterministic explainable scoring", "Scheduled crawler and REST API"]
+      "pt-BR": "Radar editorial em React e Fastify que ingere RSS/Atom e HTML configurado, deduplica notícias e aplica pontuação determinística e explicável.",
+      "en": "A React and Fastify editorial radar that ingests RSS/Atom and configured HTML, deduplicates news and applies deterministic, explainable scoring."
     },
     "links": { "github": "https://github.com/kristyancarvalho/feedforge" }
   },
@@ -75,8 +59,8 @@
     "stack": ["Java", "Gradle", "YAML", "JSON", "brModelo"],
     "title": { "pt-BR": "brmgen", "en": "brmgen" },
     "description": {
-      "pt-BR": "CLI em Java e Gradle que transforma definições YAML ou JSON de modelos conceituais e lógicos em arquivos .brM3 editáveis e interoperáveis com o brModelo, com distribuição pelo AUR.",
-      "en": "A Java and Gradle CLI that turns YAML or JSON conceptual and logical model definitions into editable .brM3 files interoperable with brModelo, with AUR distribution."
+      "pt-BR": "CLI em Java que converte modelos conceituais e lógicos em YAML ou JSON para arquivos .brM3 editáveis e interoperáveis com o brModelo.",
+      "en": "A Java CLI that turns YAML or JSON conceptual and logical models into editable .brM3 files interoperable with brModelo."
     },
     "links": { "github": "https://github.com/kristyancarvalho/brmgen" }
   },
@@ -88,8 +72,8 @@
     "stack": ["Go", "Arch Linux", "AUR", "Bubble Tea"],
     "title": { "pt-BR": "aurview", "en": "aurview" },
     "description": {
-      "pt-BR": "TUI somente leitura para pesquisar metadados do AUR e repositórios locais do pacman, classificar resultados, aplicar filtros e copiar nomes de pacotes sem sair do terminal.",
-      "en": "A read-only TUI for searching AUR metadata and local pacman repositories, ranking results, applying filters and copying package names without leaving the terminal."
+      "pt-BR": "TUI somente leitura para pesquisar e filtrar metadados do AUR e repositórios do pacman, inspecionar resultados e copiar nomes de pacotes.",
+      "en": "A read-only TUI for searching and filtering AUR and pacman repository metadata, inspecting results and copying package names."
     },
     "links": { "github": "https://github.com/kristyancarvalho/aurview" }
   },
@@ -101,8 +85,8 @@
     "stack": ["TypeScript", "SVG", "YAML", "Markdown"],
     "title": { "pt-BR": "MSVG", "en": "MSVG" },
     "description": {
-      "pt-BR": "Ecossistema TypeScript que converte descrições YAML em Markdown em diagramas SVG estáticos, determinísticos e acessíveis para documentação e escrita técnica.",
-      "en": "A TypeScript ecosystem that turns YAML descriptions in Markdown into static, deterministic and accessible SVG diagrams for documentation and technical writing."
+      "pt-BR": "Ferramentas TypeScript que convertem YAML em Markdown em diagramas SVG estáticos, determinísticos e acessíveis para documentação técnica.",
+      "en": "TypeScript tools that turn YAML in Markdown into static, deterministic and accessible SVG diagrams for technical documentation."
     },
     "links": { "github": "https://github.com/kristyancarvalho/msvg" }
   },
@@ -114,8 +98,8 @@
     "stack": ["Go", "Markdown", "Terminal UI", "Syntax Highlighting"],
     "title": { "pt-BR": "rendermd", "en": "rendermd" },
     "description": {
-      "pt-BR": "Leitor de Markdown para terminal escrito em Go, com renderização sensível à sintaxe, hot reload, busca navegável, temas configuráveis e entrada por arquivo ou stdin.",
-      "en": "A Go terminal Markdown reader with syntax-aware rendering, hot reload, navigable search, configurable themes and file or stdin input."
+      "pt-BR": "Leitor de Markdown para terminal em Go, com renderização por sintaxe, hot reload, busca navegável, temas e entrada por arquivo ou stdin.",
+      "en": "A Go terminal Markdown reader with syntax-aware rendering, hot reload, navigable search, themes and file or stdin input."
     },
     "links": { "github": "https://github.com/kristyancarvalho/rendermd" }
   },
@@ -127,8 +111,8 @@
     "stack": ["Go", "Linux", "RSS", "AI", "Email"],
     "title": { "pt-BR": "tux-letter", "en": "tux-letter" },
     "description": {
-      "pt-BR": "Serviço de newsletter em binário único que descobre feeds, extrai artigos sobre Linux e open source e sintetiza um boletim editorial com referências, entregue por e-mail.",
-      "en": "A single-binary newsletter service that discovers feeds, extracts Linux and open-source articles, and synthesizes a referenced editorial digest delivered by email."
+      "pt-BR": "Serviço Go em binário único que descobre feeds, extrai artigos sobre Linux e open source e envia um boletim editorial referenciado por e-mail.",
+      "en": "A single-binary Go service that discovers feeds, extracts Linux and open-source articles, and emails a referenced editorial digest."
     },
     "links": { "github": "https://github.com/kristyancarvalho/tux-letter" }
   },
